@@ -81,9 +81,4 @@ jQuery(document).ready(function(){
             navigation_item.removeClass('f-sort-up').addClass('f-sort-down');
         }
     });
-
-    jQuery( '.et_pb_button' ).each(function(  ) {
-        jQuery( this ).removeClass('et_pb_button');
-        jQuery( this ).addClass('btn btn-primary');
-    });
 });
