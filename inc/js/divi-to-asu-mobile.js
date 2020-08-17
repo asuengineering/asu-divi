@@ -27,7 +27,15 @@ jQuery(document).ready(function(){
             if (next_level_menu){
                 next_level_menu.find('li').each(function(  ) {
                     var next_level_anchor = jQuery( this ).children('a');
-                    var next_level_item = '<li class="cb"><a href="' + next_level_anchor.attr('href') + '">' + next_level_anchor.text() + '</a></li>'
+
+                    // When this script translates the menu bar into links, any links with no href attributes
+                    // lead to a 404 error. (href="undefined") 
+                    // As of WP 5.5, it is possible to create a menu item with a blank href attribute.
+                    var next_level_anchor_href = next_level_anchor.attr('href');
+                    if (!next_level_anchor_href) {
+                        next_level_anchor_href = "#";
+                    }
+                    var next_level_item = '<li class="cb"><a href="' + next_level_anchor_href + '">' + next_level_anchor.text() + '</a></li>'
                     next_level_items += next_level_item;
                 });
             }
