@@ -6,8 +6,8 @@ A child theme of Divi, by Elegant Themes. Originally a fork from KED at ASU. (La
 
 A theme for use with Arizona State University websites. The Divi theme, by Elegant Themes, allows you to create websites without knowing any code. This child theme is customized to approximate the design patters found with the ASU Web Standards guidelines. This child theme includes the following assets.
 
-- ASU Header and Footer, version 4.6
-- Font Awesome Pro, version 5.2
+- ASU Header and Footer, version 4.8
+- Font Awesome Pro, version 5.x
 - Google Font "Roboto", part of the ASU Web Standards.
 
 ## Requirements
@@ -28,6 +28,7 @@ This release features more adjustments to the mobile menu which bring the theme 
 
 - v2.2.1 fixes a bug that interferes with the way that the Divi button module works normally.
 - v2.2.2 fixes a bug with the script that generates the mobile menu. Blank href attributes are now handled properly.
+- v2.2.3 adds the WordPress coding standards to the project. (Should have happened a long time ago.)
 
 ### Version 2.1
 
