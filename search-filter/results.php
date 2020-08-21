@@ -30,66 +30,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( $query->have_posts() )
 {
 	?>
-	
-	Found <?php echo $query->found_posts; ?> Results<br />
-	Page <?php echo $query->query['paged']; ?> of <?php echo $query->max_num_pages; ?><br />
-	
-	<div class="pagination">
-		
-		<div class="nav-previous"><?php next_posts_link( 'Older posts', $query->max_num_pages ); ?></div>
-		<div class="nav-next"><?php previous_posts_link( 'Newer posts' ); ?></div>
-		<?php
-			/* example code for using the wp_pagenavi plugin */
-			if (function_exists('wp_pagenavi'))
-			{
-				echo "<br />";
-				wp_pagenavi( array( 'query' => $query ) );
-			}
-		?>
-	</div>
-	
+
+	<p class="results-total"><?php echo $query->found_posts; ?></p>
+
 	<?php
-	while ($query->have_posts())
-	{
+	while ( $query->have_posts() ) {
 		$query->the_post();
-		
+
 		?>
-		<div>
-			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-			
-			<p><br /><?php the_excerpt(); ?></p>
+		<div class="result">
 			<?php 
 				if ( has_post_thumbnail() ) {
-					echo '<p>';
-					the_post_thumbnail("small");
-					echo '</p>';
+					echo '<div class="result-thumbnail">';
+					the_post_thumbnail('medium_large');
+					echo '</div>';
 				}
 			?>
-			<p><?php the_category(); ?></p>
-			<p><?php the_tags(); ?></p>
-			<p><small><?php the_date(); ?></small></p>
-			
+			<div class="result-body">
+				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<?php echo '<p class="result-excerpt">' . esc_html( get_the_excerpt() ) . '</p>'; ?>
+				<?php echo get_the_term_list( $query->ID, 'category', '<p class="result-tags">', '', '</p>' ); ?>
+			</div>
 		</div>
-		
-		<hr />
+
 		<?php
 	}
 	?>
-	Page <?php echo $query->query['paged']; ?> of <?php echo $query->max_num_pages; ?><br />
-	
+
 	<div class="pagination">
-		
 		<div class="nav-previous"><?php next_posts_link( 'Older posts', $query->max_num_pages ); ?></div>
+		<div class="current-page">Page <?php echo $query->query['paged']; ?> of <?php echo $query->max_num_pages; ?></div>
 		<div class="nav-next"><?php previous_posts_link( 'Newer posts' ); ?></div>
-		<?php
-			/* example code for using the wp_pagenavi plugin */
-			if (function_exists('wp_pagenavi'))
-			{
-				echo "<br />";
-				wp_pagenavi( array( 'query' => $query ) );
-			}
-		?>
 	</div>
+
 	<?php
 }
 else
