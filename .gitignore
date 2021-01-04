@@ -40,3 +40,9 @@ Thumbs.db
 ######################
 *.psd
 *.codekit3
+
+# Composer Assets #
+######################
+vendor/*
+!vendor/htmlburger
+!vendor/fontawesome-pro
