@@ -1,11 +1,11 @@
 {
-  "name": "uds-divi-child-theme",
+  "name": "asu-divi-child-theme",
   "version": "0.1.0",
   "description": "ASU Divi Child Theme",
   "main": "index.js",
-  "repository": "git://github.com/asuengineering/uds-divi",
+  "repository": "git://github.com/asuengineering/asu-divi",
   "bugs": {
-    "url": "https://github.com/asuengineering/uds-divi/issues"
+    "url": "https://github.com/asuengineering/asu-divi/issues"
   },
   "scripts": {
     "build": "gulp compile",
@@ -24,10 +24,10 @@
     "bootstrap": "^4.6.0"
   },
   "devDependencies": {
-    "@asu-design-system/design-tokens": "dev",
     "@asu-design-system/bootstrap4-theme": "dev",
-    "@babel/core": "^7.11.1",
-    "@babel/preset-env": "^7.11.0",
+    "@asu-design-system/design-tokens": "dev",
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
     "autoprefixer": "^9.8.6",
     "browser-sync": "^2.26.12",
     "del": "^5.1.0",

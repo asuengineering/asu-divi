@@ -1,10 +1,10 @@
 <?php
 /**
- * UDS Divi Child Theme Theme functions and definitions
+ * ASU Divi Child Theme Theme functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package uds-divi
+ * @package asu-divi
  */
 
 // Exit if accessed directly.

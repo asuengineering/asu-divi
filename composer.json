@@ -1,5 +1,5 @@
 {
-	"name": "uds-divi-child-theme",
+	"name": "asu-divi-child-theme",
 	"description": "ASU Divi Child Theme",
 	"type": "wordpress-theme",
 	"license": "GPL-2.0-only",
@@ -8,7 +8,7 @@
 		"wordpress",
 		"theme"
 	],
-	"homepage": "https://github.com/asuengineering/uds-divi",
+	"homepage": "https://github.com/asuengineering/uasu-divi",
 	"require": {
 		"composer/installers": "^1.9",
 		"php": ">=5.6"

@@ -2,7 +2,7 @@
 @import "../src/sass/uds-bootstrap/design-tokens/_variables";
 
 // Override image base path for theme css
-$image-assets-path: '/wp-content/themes/uds-divi/src/img/asu-unity';
+$image-assets-path: '/wp-content/themes/asu-divi/src/img/asu-unity';
 
 @import "_media-queries";			// Media queries that model those found in Bootstrap 4
 @import "_typography";				// Typography reset based on what is happening within UDS-Bootstrap.

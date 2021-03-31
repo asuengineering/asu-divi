@@ -79,7 +79,7 @@ gulp.task("imagemin", () =>
  */
 gulp.task("minifycss", function () {
 	return gulp
-		.src([paths.css + "/uds-divi.css"])
+		.src([paths.css + "/asu-divi.css"])
 		.pipe(
 			sourcemaps.init({
 				loadMaps: true,

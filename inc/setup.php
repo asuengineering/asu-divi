@@ -15,9 +15,9 @@ function uds_divi_wp_setup() {
 	// Register the correct nav menus.
 	register_nav_menus(
 		array(
-			'primary' => __( 'Main Menu', 'uds-divi-theme' ),
-			'footer' => __( 'Footer Menu', 'uds-divi-theme' ),
-			'social-media' => __( 'Social Media Menu', 'uds-divi-theme' ),
+			'primary' => __( 'Main Menu', 'asu-divi-theme' ),
+			'footer' => __( 'Footer Menu', 'asu-divi-theme' ),
+			'social-media' => __( 'Social Media Menu', 'asu-divi-theme' ),
 		)
 	);
 }
