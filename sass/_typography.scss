@@ -75,7 +75,7 @@ h5 {
 	text-align: left;
 	opacity: 1;
 	margin: $uds-size-spacing-2 0;
-	line-height: $uds-size-spacing-3;
+	line-height: calc(100% + .12em);
 }
 
 h1 {
