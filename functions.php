@@ -50,3 +50,9 @@ if ( ! function_exists( 'uds_wp_body_attributes' ) ) {
 		echo trim( $attributes ); // phpcs:ignore WordPress.Security.EscapeOutput
 	}
 }
+
+// Remove the [...] standard output for an excerpt.
+function asu_divi_excerpt_more( $more ) {
+    return '';
+}
+add_filter('excerpt_more', 'asu_divi_excerpt_more');
