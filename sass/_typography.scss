@@ -137,3 +137,33 @@ h4 span.highlight {
 		color: $uds-color-base-gray-7;
 	}
 }
+
+/* -------------------------------------
+Link colors from various places within UDS Bootstrap.
+--------------------------------------- */
+
+a {
+    color: #8c1d40;
+    text-decoration: underline;
+    background-color: transparent;
+	border-bottom: none;
+}
+
+a:hover {
+    color: #8c1d40;
+    text-decoration: none;
+	border-bottom:none;
+}
+
+a:visited {
+    color: #440e22;
+    text-decoration: none;
+	border-bottom:none;
+}
+
+// Stronger rule to enforce underlines within various Divi places.
+// Syntax taken from native Divi stylesheet.
+.et_pb_portfolio_item .et_pb_module_header a, .et_pb_portfolio_item h3 a, .et_pb_post .entry-title a, .et_pb_post h2 a {
+    text-decoration: underline;
+	border-bottom:none;
+}
