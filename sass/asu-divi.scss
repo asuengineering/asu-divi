@@ -6,48 +6,6 @@ $image-assets-path: '/wp-content/themes/asu-divi/src/img/asu-unity';
 
 @import "_media-queries";			// Media queries that model those found in Bootstrap 4
 @import "_typography";				// Typography reset based on what is happening within UDS-Bootstrap.
-@import "_asu-header-footer";		// All styles needed for the ASU header and footer, wrapped in CSS name spaces.
-
-// Fixed top utility is being applied to the wrong ID.
-#asu-header.fixed-top {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-}
-
-/*--------------------------------------------------------------
-8. Margins for Header
---------------------------------------------------------------*/
-// Margins are needed to prevent content from flowing under global header.
-
-// Mobile
-#asu-header+div,
-#asu-header+main {
-	transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
-  margin-top: 113px;
-}
-
-#asu-header.scrolled+div,
-#asu-header.scrolled+main {
-	transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
-  margin-top: 97px;
-}
-
-// Desktop
-@include media-breakpoint-up(lg) {
-
-  #asu-header+div,
-  #asu-header+main {
-    transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
-    margin-top: 137px;
-  }
-
-  #asu-header.scrolled+div,
-  #asu-header.scrolled+main {
-    transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
-    margin-top: 81x;
-  }
-}
+@import "_asu-header-footer";		// Styles needed for the ASU header and footer, wrapped in CSS name spaces.
+@import "_uds-corrections";			// Corrections needed for UDS Header and Footer styles.
 

@@ -46,3 +46,12 @@
     margin-top: 81x;
   }
 }
+
+/*--------------------------------------------------------------
+3. Hide accordion footer menus on tablet and below.
+--------------------------------------------------------------*/
+@include media-breakpoint-down(xl) {
+	#asu-footer #footer-columns .flex-footer {
+	   display:none;
+	}
+ }
