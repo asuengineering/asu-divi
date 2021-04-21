@@ -126,5 +126,10 @@
 	@import '../src/sass/uds-bootstrap/extends/globalfooter';
 	// @import '../src/sass/uds-bootstrap/extends/blockquotes';
 	@import '../src/sass/uds-bootstrap/extends/global-header';
-
 }
+
+// The global header & footer elements have styles already applied to #asu-header and #asu-footer.
+// Encompassing these partials in an additional ID invalidates the rules.
+// @import '../src/sass/uds-bootstrap/extends/globalfooter';
+// @import '../src/sass/uds-bootstrap/extends/global-header';
+

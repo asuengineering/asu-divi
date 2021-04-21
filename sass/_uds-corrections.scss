@@ -1,13 +1,9 @@
-// Design tokens from ASU Boostrap library
-@import "../src/sass/uds-bootstrap/design-tokens/_variables";
+// Corrections for ASU Header & Footer styles.
+// Overrides things from UDS Bootstrap to work correctly in this context.
 
-// Override image base path for theme css
-$image-assets-path: '/wp-content/themes/asu-divi/src/img/asu-unity';
-
-@import "_media-queries";			// Media queries that model those found in Bootstrap 4
-@import "_typography";				// Typography reset based on what is happening within UDS-Bootstrap.
-@import "_asu-header-footer";		// All styles needed for the ASU header and footer, wrapped in CSS name spaces.
-
+/*--------------------------------------------------------------
+1. Fixed Top
+--------------------------------------------------------------*/
 // Fixed top utility is being applied to the wrong ID.
 #asu-header.fixed-top {
     position: fixed;
@@ -18,7 +14,7 @@ $image-assets-path: '/wp-content/themes/asu-divi/src/img/asu-unity';
 }
 
 /*--------------------------------------------------------------
-8. Margins for Header
+2. Margins for Main Content
 --------------------------------------------------------------*/
 // Margins are needed to prevent content from flowing under global header.
 
@@ -50,4 +46,3 @@ $image-assets-path: '/wp-content/themes/asu-divi/src/img/asu-unity';
     margin-top: 81x;
   }
 }
-
