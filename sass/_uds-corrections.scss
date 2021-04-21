@@ -22,36 +22,36 @@
 #asu-header+div,
 #asu-header+main {
 	transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
-  margin-top: 113px;
+	margin-top: 113px;
 }
 
 #asu-header.scrolled+div,
 #asu-header.scrolled+main {
 	transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
-  margin-top: 97px;
+	margin-top: 97px;
 }
 
 // Desktop
-@include media-breakpoint-up(lg) {
+@media (max-width: calc(992px - .02px)) {
 
-  #asu-header+div,
-  #asu-header+main {
-    transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
-    margin-top: 137px;
-  }
+	#asu-header+div,
+	#asu-header+main {
+		transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+		margin-top: 137px;
+	}
 
-  #asu-header.scrolled+div,
-  #asu-header.scrolled+main {
-    transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
-    margin-top: 81x;
-  }
+	#asu-header.scrolled+div,
+	#asu-header.scrolled+main {
+		transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+		margin-top: 81x;
+	}
 }
 
 /*--------------------------------------------------------------
 3. Hide accordion footer menus on tablet and below.
 --------------------------------------------------------------*/
-@include media-breakpoint-down(xl) {
+@media (max-width: calc(1224px - .02px)) {
 	#asu-footer #footer-columns .flex-footer {
-	   display:none;
+		display:none;
 	}
- }
+};
