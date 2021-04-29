@@ -55,3 +55,17 @@
 		display:none;
 	}
 };
+
+
+/*--------------------------------------------------------------
+4. Header title underline styles. Ported from UDS-WordPress _theme.scss
+--------------------------------------------------------------*/
+
+#asu-header .title .subdomain-name a {
+	color: #191919;
+	text-decoration: none;
+}
+
+#asu-header .title .subdomain-name a:hover {
+	text-decoration: underline;
+}
