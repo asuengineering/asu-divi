@@ -69,3 +69,11 @@
 #asu-header .title .subdomain-name a:hover {
 	text-decoration: underline;
 }
+
+/*--------------------------------------------------------------
+4. Widget link lists require a hover state that has an underline.
+--------------------------------------------------------------*/
+
+.et_pb_widget li a:hover {
+    text-decoration: underline;
+}
