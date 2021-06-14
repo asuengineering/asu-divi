@@ -180,6 +180,8 @@ gulp.task("scripts", function () {
 	var scripts = [
 		paths.dev + "/js/bootstrap4/bootstrap.bundle.js",
 		paths.dev + "/js/skip-link-focus-fix.js",
+		paths.dev + "/js/bootstrap4-asu/cookie-consent.min.js",
+		paths.dev + "/js/custom/init-cookie-consent.js",
 
 		// Adding currently empty javascript file to add on for your own themes´ customizations
 		// Please add any customizations to this .js file only!
@@ -221,6 +223,11 @@ gulp.task("copy-assets", function (done) {
 	gulp.src(
 		paths.node + "/@asu-design-system/bootstrap4-theme/src/js/**/*"
 	).pipe(gulp.dest(paths.dev + "/js/uds-bootstrap"));
+
+	// Copy UDS cookie-consent JS files
+	var stream = gulp
+		.src(paths.node + "/@asu-design-system/cookie-consent/dist/*.js")
+		.pipe(gulp.dest(paths.dev + "/js/uds-bootstrap"));
 
 	// Copy all UDS Bootstrap image files
 	gulp.src(

@@ -28,5 +28,11 @@ function uds_divi_enqueue_scripts() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri() . '/src/js/bootstrap4/bootstrap.min.js', array('jquery'), null, false);
 	wp_enqueue_script( 'asu-header', get_stylesheet_directory_uri() . '/src/js/uds-bootstrap/global-header.js', array('jquery', 'bootstrap'), null, false);
+
+	wp_enqueue_script ( 'cookie-consent-preact', 'https://unpkg.com/preact@10.5.13/dist/preact.min.js', array(), null, false );
+	wp_enqueue_script ( 'cookie-consent', get_stylesheet_directory_uri() . '/src/js/uds-bootstrap/cookie-consent.min.js', array(), null, false );
+
+	wp_enqueue_script ( 'asu-divi', get_stylesheet_directory_uri() . '/js/theme.js', array(), null, false );
+
 }
 add_action( 'wp_enqueue_scripts', 'uds_divi_enqueue_scripts' );
