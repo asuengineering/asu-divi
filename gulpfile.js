@@ -224,10 +224,15 @@ gulp.task("copy-assets", function (done) {
 		paths.node + "/@asu-design-system/bootstrap4-theme/src/js/**/*"
 	).pipe(gulp.dest(paths.dev + "/js/uds-bootstrap"));
 
+	// Copy Preact files from NPM
+	var stream = gulp
+	.src(paths.node + "/@asu-design-system/cookie-consent/dist/*.js")
+	.pipe(gulp.dest(paths.dev + "/js/uds-bootstrap"));
+
 	// Copy UDS cookie-consent JS files
 	var stream = gulp
-		.src(paths.node + "/@asu-design-system/cookie-consent/dist/*.js")
-		.pipe(gulp.dest(paths.dev + "/js/uds-bootstrap"));
+		.src(paths.node + "preact/dist/*.js")
+		.pipe(gulp.dest(paths.dev + "/js/preact"));
 
 	// Copy all UDS Bootstrap image files
 	gulp.src(
