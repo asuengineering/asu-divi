@@ -76,6 +76,8 @@ do_action( 'uds_wp_before_global_footer' );
 	</div> <!-- wrapper-footer-colophon -->
 </footer>
 
+<div id="cookieConsentContainer"></div>
+
 <?php wp_footer(); ?>
 
 </body>
