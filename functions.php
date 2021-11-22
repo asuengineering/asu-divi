@@ -12,6 +12,7 @@ defined( 'ABSPATH' ) || exit;
 
 $uds_wp_includes = array(
 	'/enqueue.php',                       		 // Enqueues the correct child theme files.
+	'/asu-favicons.php',						 // Adds favicons directly to <head>
 	'/setup.php',								 // Theme setup options.
 	'/class-wp-social-media-walker.php',         // Load custom WordPress nav walker for footer Social Media menu wdiget.
 	'/customizer.php',                           // Customizer additions.
