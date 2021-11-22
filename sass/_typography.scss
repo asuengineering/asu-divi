@@ -121,8 +121,8 @@ h3 span.highlight,
 h4 span.highlight {
 	&-gold {
 		box-shadow: -.15em 0 0 $uds-color-base-gray-7, .15em 0 0 $uds-color-base-gray-7;
-		background: $uds-color-base-gray-7;
-		color: $uds-color-base-gold;
+		background: $uds-color-base-gold;
+		color: $uds-color-base-gray-7;
 	}
 
 	&-black {
