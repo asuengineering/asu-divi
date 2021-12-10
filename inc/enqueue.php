@@ -10,11 +10,19 @@
  **/
 function uds_divi_enqueue_scripts() {
 
-	$the_theme     = wp_get_theme();
-	$theme_version = $the_theme->get( 'Version' );
+	// Get the Divi version
+	$the_parent_theme = wp_get_theme()->parent();
+	$parent_theme_version = $the_parent_theme->Version;
 
-	$css_version = $theme_version . '.' . filemtime( get_template_directory() . '/style.css' );
-	$child_css_version = $theme_version . '.' . filemtime( get_stylesheet_directory() . '/style.css' );
+	// Get the ASU Divi version
+	$the_child_theme     = wp_get_theme();
+	$child_theme_version = $the_child_theme->get( 'Version' );
+
+	do_action( 'qm/debug', 'Parent:' . $parent_theme_version);
+	do_action( 'qm/debug', 'Child:' . $child_theme_version);
+
+	$css_version = $parent_theme_version . '.' . filemtime( get_template_directory() . '/style.css' );
+	$child_css_version = $child_theme_version . '.' . filemtime( get_stylesheet_directory() . '/style.css' );
 
 	wp_register_style( 'divi-style', get_template_directory_uri() . '/style.css', array(), $css_version );
 	wp_register_style( 'asu-divi-style', get_stylesheet_directory_uri() . '/css/asu-divi.css', array( 'divi-style' ), $child_css_version );
