@@ -1,9 +1,16 @@
 .uds-image-text-block {
   &-container {
+    width: 100%;
+    max-width: 1920px;
     border: 1px solid $uds-color-base-gray-3;
     background: $uds-color-background-white 0% 0% no-repeat padding-box;
     display: flex;
     flex-direction: row;
+    margin: 0 auto;
+
+    &-right {
+      flex-direction: row-reverse;
+    }
 
     @include media-breakpoint-up(md) {
       max-height: 540px;
@@ -15,10 +22,12 @@
   }
 
   &-image-container {
+    width: 100%;
     display: flex;
     flex: 1;
 
     img {
+      width: 100%;
       object-fit: cover;
     }
 
@@ -38,6 +47,10 @@
     max-width: 50%;
     padding: 48px 96px;
 
+    &.gray-7-bg {
+      color: $uds-color-base-white;
+    }
+
     @media screen and (max-width: $uds-breakpoint-lg) {
       padding: 48px;
     }
@@ -47,7 +60,6 @@
     }
 
     @media screen and (max-width: $uds-breakpoint-sm) {
-      padding: 24px;
       max-width: 100%;
       order: 2;
 

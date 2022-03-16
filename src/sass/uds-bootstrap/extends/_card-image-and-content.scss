@@ -1,7 +1,6 @@
 .uds-card-image-and-content {
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
 
   &-image-container {
     background-size: cover;
@@ -10,28 +9,32 @@
     height: 512px;
     position: relative;
     width: 100%;
-
-    & > &-headline {
-      color: $uds-color-base-white;
-      left: 0px;
-      bottom: 0px;
-      font: normal normal bold $uds-size-font-xxxl Arial;
-      padding: $uds-size-spacing-4;
-      position: absolute;
-      max-width: 50%;
-    }
   }
 
   &-content-container {
     display: flex;
     flex-direction: row;
+    position: relative;
+
+    & > &-headline {
+      left: 0px;
+      top: -175px;
+      font: normal normal bold $uds-size-font-xxxl Arial;
+      padding: $uds-size-spacing-4;
+      position: absolute;
+      max-width: 50%;
+      color: $uds-color-base-white;
+    }
 
     .content {
+      width: 55%;
       padding: $uds-size-spacing-4;
     }
 
     .card {
-      margin: -201px 96px 0 96px;
+      width: 35%;
+      margin: -201px 5% 0 10%;
+      height: unset;
     }
   }
 }
@@ -40,7 +43,8 @@
   .uds-card-image-and-content {
     &-content-container {
       .card {
-        margin: -161px 48px 0 48px;
+        width: 40%;
+        margin: -161px 2% 0 8%;
       }
     }
   }
@@ -50,8 +54,16 @@
   .uds-card-image-and-content {
     &-content-container {
       flex-direction: column;
+
+      & > &-headline {
+        max-width: 100%;
+      }
+      .content {
+        width: 100%;
+      }
       .card {
-        margin: 0 24px 24px 24px;
+        width: auto;
+        margin: 0 $uds-size-spacing-4;
       }
     }
   }
@@ -61,7 +73,8 @@
   .uds-card-image-and-content {
     &-image-container {
       height: $uds-size-spacing-32;
-
+    }
+    &-content-container {
       & > &-headline {
         font: normal normal bold 2rem Arial;
         padding: $uds-size-spacing-4;

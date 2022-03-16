@@ -26,13 +26,18 @@ blockquote:before {
 2. Blockquote, mobile
 ------------------------------------------------------------------- */
 .uds-blockquote {
-
   display: grid;
   grid-template-columns: auto 1fr;
   gap: $uds-size-spacing-3;
 
   font-size: $uds-size-font-large;
   font-weight: 700;
+
+  padding: $uds-size-spacing-4;
+
+  @include media-breakpoint-down(sm) {
+    padding: $uds-size-spacing-4;
+  }
 
   svg {
     grid-column: 1;
@@ -42,7 +47,6 @@ blockquote:before {
   }
 
   blockquote {
-
     grid-column: 2;
     margin-top: 0;
     margin-bottom: 0;
@@ -52,12 +56,17 @@ blockquote:before {
     }
 
     p:last-of-type:after {
-      content: "\201D";
+      content: '\201D';
     }
   }
 
   .citation {
+    display: flex;
 
+    .citation-content {
+      display: flex;
+      flex-direction: column;
+    }
     cite {
       display: block;
       font-size: $uds-size-font-medium;
@@ -67,52 +76,46 @@ blockquote:before {
         font-weight: 700;
       }
 
-      &.name:before {
-        padding-right: 0.5em;
-        content: "\2014";
-      }
-
       &.description {
         font-weight: 400;
-        padding-left: 1.5rem;
       }
     }
   }
 
-  &.with-image {
+  .citation:before {
+    padding-right: 0.5em;
+    margin-top: -5px;
+    content: '\2014';
+  }
 
+  &.with-image {
     img {
-      max-width: 40px;
-      height: auto;
-      background-repeat: no-repeat;
-      background-position: 50%;
-      border-radius: 50%;
-      width: 180px;
-      height: 180px;
+      object-fit: cover;
+      border-radius: 100%;
+      width: 72px;
+      height: 72px;
     }
 
     blockquote p:first-of-type:before {
-      content: "\201C";
+      content: '\201C';
     }
-
   }
 
   &.no-citation {
     blockquote {
-
       display: flex;
       flex-direction: column;
       justify-content: center;
 
       p:first-of-type:before {
-        content: "\201C";
+        content: '\201C';
       }
 
       h3 {
         margin-bottom: 0;
       }
 
-      h3+p {
+      h3 + p {
         margin-top: $uds-size-spacing-3;
       }
     }
@@ -145,16 +148,6 @@ blockquote:before {
     h3 {
       text-align: center;
     }
-
-    img {
-      max-width: 180px;
-      height: auto;
-      background-repeat: no-repeat;
-      background-position: 50%;
-      border-radius: 50%;
-      width: 180px;
-      height: 180px;
-    }
   }
 }
 
@@ -162,9 +155,7 @@ blockquote:before {
 4. Blockquote, desktop
 ------------------------------------------------------------------- */
 @include media-breakpoint-up(sm) {
-
   .uds-blockquote {
-
     &.no-cite {
       align-items: center;
     }
@@ -173,18 +164,12 @@ blockquote:before {
       gap: $uds-size-spacing-4;
 
       img {
-        max-width: 180px;
-        height: auto;
-        background-repeat: no-repeat;
-        background-position: 50%;
-        border-radius: 50%;
         width: 180px;
         height: 180px;
       }
     }
 
     &.with-image.reversed {
-
       img {
         grid-column: 2;
       }
@@ -195,7 +180,6 @@ blockquote:before {
       }
     }
   }
-
 }
 
 /*------------------------------------------------------------------
@@ -204,8 +188,10 @@ blockquote:before {
 ------------------------------------------------------------------- */
 .alt-citation,
 .uds-testimonial {
-
   .citation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &:before {
       content: '';
@@ -218,11 +204,19 @@ blockquote:before {
 
     cite.name:before {
       content: none;
+      display: flex;
+    }
+
+    cite.name {
+      display: flex;
+      justify-content: flex-start;
     }
 
     cite.description {
       font-weight: 400;
       padding-left: 0;
+      display: flex;
+      justify-content: flex-start;
     }
   }
 
@@ -248,11 +242,11 @@ blockquote:before {
     text-align: center;
 
     p:first-of-type:before {
-      content: "\201C";
+      content: '\201C';
     }
 
     p:last-of-type:after {
-      content: "\201D";
+      content: '\201D';
     }
 
     p:last-of-type {
@@ -261,10 +255,18 @@ blockquote:before {
   }
 
   .citation:before {
-    display: inline-flex
+    display: inline-flex;
+    margin: $uds-size-spacing-2 auto;
+  }
+
+  cite.name,
+  cite.description {
+    display: flex;
+    justify-content: center;
   }
 
   &.with-image img {
-    max-width: 180px;
+    width: 180px;
+    height: 180px;
   }
 }

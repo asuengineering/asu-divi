@@ -8,7 +8,7 @@ Sidebar Navigation
 @mixin like-an-h4 {
   font-size: 1rem;
   line-height: 1.5rem;
-  letter-spacing: -0.037rem;
+  letter-spacing: 0;
 }
 
 @mixin like-an-h5 {
@@ -21,12 +21,44 @@ Sidebar Navigation
 2. Sidebar
 --------------------------------------------------------------------*/
 
+.sidebar-toggler {
+  border: 1px solid $uds-color-base-gray-3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $uds-size-spacing-3 $uds-size-spacing-2;
+
+  p {
+    margin: 0;
+  }
+
+  svg {
+    transition: all 0.3s;
+  }
+
+  &[aria-expanded='false'] {
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
 .sidebar {
+  border: 1px solid $uds-color-base-gray-3;
+
+  a:first-child {
+    border-top: 0;
+  }
+
   .nav-text {
     @include like-an-h5;
     color: $uds-color-base-gray-7;
     padding: $uds-size-spacing-2;
-    border: 1px solid $uds-color-base-gray-2;
+    border: 1px solid $uds-color-base-gray-3;
 
     &:not(:last-child) {
       border-bottom: 0;
@@ -34,9 +66,18 @@ Sidebar Navigation
   }
 
   .nav-link {
+    position: relative;
+    padding: 0 $uds-size-spacing-1;
     color: $uds-color-base-gray-7;
+    @include like-an-h4;
 
-    &:hover {
+    &:not(.is-active) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &:hover,
+    &:focus {
       text-decoration: underline;
     }
 
@@ -44,38 +85,44 @@ Sidebar Navigation
       color: $uds-color-base-gray-7;
     }
 
-    &.active {
+    &.is-active {
       text-decoration: none;
-      padding-bottom: 0;
     }
 
-    &.active:after {
+    &.is-active:after {
       content: '';
-      position: relative;
+      position: absolute;
       display: block;
-      margin-top: $uds-size-spacing-2;
       height: $uds-size-spacing-1;
       width: 100%;
       background-color: $uds-color-base-gold;
       text-decoration: none;
+      bottom: -0.7rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &[aria-expanded='true'] svg {
+      transform: rotate(180deg);
     }
   }
 
-  > .nav-link {
-    border: 1px solid $uds-color-base-gray-2;
-    padding: $uds-size-spacing-3 $uds-size-spacing-2;
+  > .nav-link-container {
+    padding: 0 $uds-size-spacing-1;
     overflow: hidden;
     color: $uds-color-base-gray-7;
-
-    @include like-an-h4;
-
-    &:not(:last-child) {
-      border-bottom: 0;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:not(:first-child) {
+      border-top: 1px solid $uds-color-base-gray-3;
     }
   }
 
   .card-foldable {
-    border: 1px solid $uds-color-base-gray-2;
+    border: 0;
+    border-top: 1px solid $uds-color-base-gray-3;
 
     .card-header,
     .card-body {
@@ -83,8 +130,11 @@ Sidebar Navigation
     }
 
     .card-header {
-      h1, h2, h3, h4, h5
-      {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
         font-weight: 400;
       }
 
@@ -104,17 +154,33 @@ Sidebar Navigation
     .card-body > .nav-link {
       padding: 0 $uds-size-spacing-5 0 $uds-size-spacing-3;
 
-      &:after {
-        margin-top: $uds-size-spacing-1;
+      &.is-active {
+        &:after {
+          bottom: -1rem;
+          width: calc(100% - #{$uds-size-spacing-5 + $uds-size-spacing-3});
+          transform: translateX(calc(-50% - #{$uds-size-spacing-1}));
+        }
       }
 
       + .nav-link {
         padding-top: $uds-size-spacing-2;
       }
     }
+  }
 
-    &:not(:last-child) {
-      border-bottom: 0;
+  @include media-breakpoint-up(md) {
+    &.collapse {
+      display: block;
+      height: auto !important;
+      visibility: visible;
+
+      &:not(.show) {
+        display: block;
+      }
     }
+  }
+
+  @include media-breakpoint-down(md) {
+    border-top: 0;
   }
 }
