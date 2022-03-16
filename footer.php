@@ -44,8 +44,9 @@ do_action( 'uds_wp_before_global_footer' );
 			<div class="row">
 				<div class="col">
 					<div class="d-flex footer-innovation-links">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/src/img/asu-unity/innovation-lockup/on-gold/200420-GlobalFooter-No1InnovationLockup.png" alt="Number one in the U.S. for innovation. #1 ASU, #2 Stanford, #3 MIT. - U.S. News and World Report, 5 years, 2016-2020">
-
+						<a class="img-link" href="https://www.asu.edu/rankings">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/src/img/asu-unity/innovation-lockup/on-gold/200420-GlobalFooter-No1InnovationLockup.png" alt="Number one in the U.S. for innovation. ASU ahead of MIT and Stanford - U.S. News and World Report, 7 years, 2016-2022">
+						</a>
 						<nav class="nav" aria-label="University Services">
 							<a class="nav-link" href="https://asu.edu/map/">Maps and Locations</a>
 							<a class="nav-link" href="https://asu.edu/asujobs">Jobs</a>
@@ -69,6 +70,7 @@ do_action( 'uds_wp_before_global_footer' );
 						<a class="nav-link" href="https://asu.edu/privacy/">Privacy</a>
 						<a class="nav-link" href="https://asu.edu/tou/">Terms of Use</a>
 						<a class="nav-link" href="https://asu.edu/emergency/">Emergency</a>
+						<a class="nav-link" href="https://eoss.asu.edu/health/announcements/coronavirus">COVID-19 Information</a>
 					</nav>
 				</div>
 			</div>
