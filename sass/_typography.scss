@@ -120,7 +120,7 @@ h2 span.highlight,
 h3 span.highlight,
 h4 span.highlight {
 	&-gold {
-		box-shadow: -.15em 0 0 $uds-color-base-gray-7, .15em 0 0 $uds-color-base-gray-7;
+		box-shadow: -.15em 0 0 $uds-color-base-gold, .15em 0 0 $uds-color-base-gold;
 		background: $uds-color-base-gold;
 		color: $uds-color-base-gray-7;
 	}
@@ -171,4 +171,29 @@ a:visited {
 .et_pb_portfolio_item .et_pb_module_header a:hover, .et_pb_portfolio_item h3 a:hover, .et_pb_post .entry-title a:hover, .et_pb_post h2 a:hover {
     text-decoration: none;
 	border-bottom:none;
+}
+
+/* -------------------------------------
+Button colors, overwrite classes. 
+Divi settings don't work, apparently. :-/ 
+--------------------------------------- */
+
+#main-content .et_pb_button_module_wrapper a.et_pb_button.button-maroon {
+    color: $uds-color-base-white !important;
+    background-color: $uds-color-base-maroon;
+}
+
+#main-content .et_pb_button_module_wrapper a.et_pb_button.button-gold {
+    color: $uds-color-base-gray-7 !important;
+    background-color: $uds-color-base-gold;
+}
+
+#main-content .et_pb_button_module_wrapper a.et_pb_button.button-dark {
+    color: $uds-color-base-white !important;
+    background-color: $uds-color-base-gray-7;
+}
+
+#main-content .et_pb_button_module_wrapper a.et_pb_button.button-gray {
+    color: $uds-color-base-gray-7 !important;
+    background-color: $uds-color-base-gray-4;
 }
