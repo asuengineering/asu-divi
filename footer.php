@@ -45,7 +45,7 @@ do_action( 'uds_wp_before_global_footer' );
 				<div class="col">
 					<div class="d-flex footer-innovation-links">
 						<a class="img-link" href="https://www.asu.edu/rankings">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/src/img/asu-unity/innovation-lockup/on-gold/200420-GlobalFooter-No1InnovationLockup.png" alt="Number one in the U.S. for innovation. ASU ahead of MIT and Stanford - U.S. News and World Report, 7 years, 2016-2022">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/src/img/asu-unity/innovation-lockup/on-gold/GlobalFooter-No1InnovationLockup_2023.png" alt="Number one in the U.S. for innovation. ASU ahead of MIT and Stanford - U.S. News and World Report, 8 years, 2016-2023">
 						</a>
 						<nav class="nav" aria-label="University Services">
 							<a class="nav-link" href="https://asu.edu/map/">Maps and Locations</a>
