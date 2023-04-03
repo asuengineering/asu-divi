@@ -21,13 +21,12 @@
     "framework"
   ],
   "dependencies": {
+    "@asu/component-cookie-consent": "^1.0.2",
+    "@asu/component-header": "^1.3.0",
     "bootstrap": "^4.6.0",
     "preact": "^10.5.13"
   },
   "devDependencies": {
-    "@asu-design-system/bootstrap4-theme": "dev",
-    "@asu-design-system/cookie-consent": "dev",
-    "@asu-design-system/design-tokens": "dev",
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
     "autoprefixer": "^9.8.6",
