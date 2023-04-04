@@ -11,13 +11,19 @@
 defined( 'ABSPATH' ) || exit;
 
 $uds_wp_includes = array(
-	'/enqueue.php',                       		 // Enqueues the correct child theme files.
-	'/asu-favicons.php',						 // Adds favicons directly to <head>
-	'/setup.php',								 // Theme setup options.
-	'/class-wp-social-media-walker.php',         // Load custom WordPress nav walker for footer Social Media menu wdiget.
-	'/customizer.php',                           // Customizer additions.
-	'/render-partials.php',                      // Rendering methods for certain customizer-controlled items.
-	'/wp-custom-menu.php',                       // Load custom menu builder functions.
+	'/enqueue.php',                       		 		// Enqueues the correct child theme files.
+	'/asu-favicons.php',						 		// Adds favicons directly to <head>
+	'/setup.php',								 		// Theme setup options.
+	'/class-unity-react-header-ctabtn-walker.php',		// Nav walker class specifically for the CTA buttons within the header.
+	'/class-unity-react-header-navtree-walker.php',		// Nav walker class for the main navigation object within the header.
+	'/menu-item-metabox.php',                       	// Adds a meta box for CTA button colors to each menu item.
+	'/class-wp-social-media-walker.php',         		// Load custom WordPress nav walker for footer Social Media menu wdiget.
+	'/customizer.php',                           		// Customizer additions.
+	'/render-partials.php',                     		// Rendering methods for certain customizer-controlled items.
+	// '/header-localize-script.php'				 		// Pass header variables to React for rendering.
+	'/wp-custom-menu.php',                       		// Load custom menu builder functions.
+
+
 );
 
 foreach ( $uds_wp_includes as $file ) {
