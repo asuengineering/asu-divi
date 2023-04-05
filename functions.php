@@ -20,8 +20,8 @@ $uds_wp_includes = array(
 	'/class-wp-social-media-walker.php',         		// Load custom WordPress nav walker for footer Social Media menu wdiget.
 	'/customizer.php',                           		// Customizer additions.
 	'/render-partials.php',                     		// Rendering methods for certain customizer-controlled items.
-	// '/header-localize-script.php'				 		// Pass header variables to React for rendering.
-	'/wp-custom-menu.php',                       		// Load custom menu builder functions.
+	'/header-localize-script.php'				 		// Pass header variables to React for rendering.
+	// '/wp-custom-menu.php',                       		// Load custom menu builder functions.
 
 
 );

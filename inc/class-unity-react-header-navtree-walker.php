@@ -1,18 +1,18 @@
 <?php
 /**
- * Pitchfork Unity Header, Nav Walker, NavTree (prop)
+ * ASU Divi Unity Header, Nav Walker, NavTree (prop)
  * Extends native Nav Walker.
  *
  * Returns a serialized array to be included in the navTree and mobileNavTree
  * props for the ASU React Header.
  *
- * @package Pitchfork
+ * @package asu-divi
  *
  */
 
-if ( ! class_exists('Pitchfork_React_Header_Navtree') ) {
+if ( ! class_exists('UDS_Divi_React_Header_Navtree') ) {
 
-    class Pitchfork_React_Header_Navtree extends Walker_Nav_Menu {
+    class UDS_Divi_React_Header_Navtree extends Walker_Nav_Menu {
 
 		function start_lvl( &$output, $depth = 0, $args = null ) {
 			$output .= '';
@@ -26,6 +26,9 @@ if ( ! class_exists('Pitchfork_React_Header_Navtree') ) {
 
 			// Unserialize contatenated $output string as array.
 			// If this is the first object, it'll be empty. Set it up with default structure.
+
+			$cta_button = get_post_meta( $item->ID, '_menu_item_cta_button', true );
+			do_action('qm/debug', $cta_button);
 
 			if ( empty($output)) {
 				$start_navTree = new stdClass();
@@ -51,9 +54,9 @@ if ( ! class_exists('Pitchfork_React_Header_Navtree') ) {
 			$isCTA = false;
 			$exIcon = false;
 
-			$isCTA = get_field('menu_cta_button', $item);
-			$btnColor = get_field('menu_cta_button_color', $item);
-			$exIcon = get_field('menu_external_link', $item);
+			// $isCTA = get_field('menu_cta_button', $item);
+			// $btnColor = get_field('menu_cta_button_color', $item);
+			// $exIcon = get_field('menu_external_link', $item);
 
 			// Create $entry object from $item data. Prep to insert into the correct place.
 			$entry = new stdClass();
@@ -176,7 +179,7 @@ if ( ! class_exists('Pitchfork_React_Header_Navtree') ) {
 
 			// Convert $prop back to a string so it can be passed to the next iteration of start_el.
 			$output = maybe_serialize($prop);
-			do_action('qm/debug', $prop);
+			// do_action('qm/debug', $prop);
 
         }
 

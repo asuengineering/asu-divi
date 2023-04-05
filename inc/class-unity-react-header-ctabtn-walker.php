@@ -10,9 +10,9 @@
  *
  */
 
-if ( ! class_exists('Pitchfork_React_Header_CTAButtons') ) {
+if ( ! class_exists('UDS_Divi_React_Header_CTAButtons') ) {
 
-    class Pitchfork_React_Header_CTAButtons extends Walker_Nav_Menu {
+    class UDS_Divi_React_Header_CTAButtons extends Walker_Nav_Menu {
 
 		function start_lvl( &$output, $depth = 0, $args = null ) {
 			$output .= '';
@@ -36,12 +36,12 @@ if ( ! class_exists('Pitchfork_React_Header_CTAButtons') ) {
 
 			// Gather ACF properties from the menu item.
 			$isCTA = false;
-			$isCTA = get_field('menu_cta_button', $item);
+			// $isCTA = get_field('menu_cta_button', $item);
 
 			// The button color for these CTA buttons allows for only maroon or gold.
 			// The "dark" option actually renders as gray (because dark is not a supported option?).
 			// Reroute to a default color of maroon instead.
-			$btnColor = get_field('menu_cta_button_color', $item);
+			// $btnColor = get_field('menu_cta_button_color', $item);
 			if ('dark' == $btnColor) {
 				$btnColor = 'maroon';
 			}
