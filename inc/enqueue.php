@@ -18,9 +18,6 @@ function uds_divi_enqueue_scripts() {
 	$the_child_theme     = wp_get_theme();
 	$child_theme_version = $the_child_theme->get( 'Version' );
 
-	do_action( 'qm/debug', 'Parent:' . $parent_theme_version);
-	do_action( 'qm/debug', 'Child:' . $child_theme_version);
-
 	$css_version = $parent_theme_version . '.' . filemtime( get_template_directory() . '/style.css' );
 	$child_css_version = $child_theme_version . '.' . filemtime( get_stylesheet_directory() . '/style.css' );
 
