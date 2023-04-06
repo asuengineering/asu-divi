@@ -35,17 +35,14 @@ if ( ! class_exists('UDS_Divi_React_Header_CTAButtons') ) {
 			}
 
 			// Gather ACF properties from the menu item.
-			$isCTA = false;
-			// $isCTA = get_field('menu_cta_button', $item);
+			$btnColor = get_post_meta( $item->ID, '_menu_item_cta_button', true );
+			$isCTA = ( ! empty( $btnColor ) ) ? true : false;
 
-			// The button color for these CTA buttons allows for only maroon or gold.
-			// The "dark" option actually renders as gray (because dark is not a supported option?).
-			// Reroute to a default color of maroon instead.
-			// $btnColor = get_field('menu_cta_button_color', $item);
-			if ('dark' == $btnColor) {
+			// Top level CTA buttons should only be maroon or gold.
+			// Reroute to a default color of maroon for any choice that's not gold.
+			if ('gold' !== $btnColor) {
 				$btnColor = 'maroon';
 			}
-
 
 			/**
 			 * Depth 0: First level

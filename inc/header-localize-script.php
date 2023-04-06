@@ -116,7 +116,7 @@ if ( ! function_exists( 'uds_divi_localize_component_header_script' ) ) {
 		// pass WordPress PHP variables to the uds-header-scripts script we enqueued above
 		// These variables are props for the header React component
 		wp_localize_script(
-			'pitchfork-custom', // the handle of the script to pass our variables
+			'component-header-init', // the handle of the script to pass our variables
 			'udsHeaderVars', // object name to access our PHP variables from in our script
 			$localized_array
 		);

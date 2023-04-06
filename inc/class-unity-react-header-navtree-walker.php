@@ -27,9 +27,6 @@ if ( ! class_exists('UDS_Divi_React_Header_Navtree') ) {
 			// Unserialize contatenated $output string as array.
 			// If this is the first object, it'll be empty. Set it up with default structure.
 
-			$cta_button = get_post_meta( $item->ID, '_menu_item_cta_button', true );
-			do_action('qm/debug', $cta_button);
-
 			if ( empty($output)) {
 				$start_navTree = new stdClass();
 				$start_navTree->href = get_home_url();
@@ -50,13 +47,12 @@ if ( ! class_exists('UDS_Divi_React_Header_Navtree') ) {
 				$prop = maybe_unserialize($output);
 			}
 
-			// Gather ACF properties from the menu item.
-			$isCTA = false;
-			$exIcon = false;
+			// Gather CTA button value from post meta.
+			$cta_button = get_post_meta( $item->ID, '_menu_item_cta_button', true );
+			$isCTA = ( ! empty( $cta_button ) ) ? true : false;
 
-			// $isCTA = get_field('menu_cta_button', $item);
-			// $btnColor = get_field('menu_cta_button_color', $item);
-			// $exIcon = get_field('menu_external_link', $item);
+			// TODO: Create item meta field for turning this on/off. Defaulted to false.
+			$exIcon = false;
 
 			// Create $entry object from $item data. Prep to insert into the correct place.
 			$entry = new stdClass();
@@ -179,7 +175,7 @@ if ( ! class_exists('UDS_Divi_React_Header_Navtree') ) {
 
 			// Convert $prop back to a string so it can be passed to the next iteration of start_el.
 			$output = maybe_serialize($prop);
-			// do_action('qm/debug', $prop);
+			do_action('qm/debug', $prop);
 
         }
 
