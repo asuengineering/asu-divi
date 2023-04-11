@@ -51,3 +51,6 @@ if ( ! function_exists( 'uds_wp_custom_excerpt_more' ) ) {
 		return $more;
 	}
 }
+
+// Removes the default included SVG filters (a Gutenberg function)
+remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );

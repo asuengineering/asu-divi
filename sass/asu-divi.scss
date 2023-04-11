@@ -1,11 +1,11 @@
 // Design tokens from ASU Boostrap library
-@import "../src/sass/uds-bootstrap/design-tokens/_variables";
+@import "_variables";
 
 // Override image base path for theme css
 $image-assets-path: '/wp-content/themes/asu-divi/src/img/asu-unity';
 
-@import "_media-queries";			// Media queries that model those found in Bootstrap 4
-@import "_typography";				// Typography reset based on what is happening within UDS-Bootstrap.
-@import "_asu-header-footer";		// Styles needed for the ASU header and footer, wrapped in CSS name spaces.
-@import "_uds-corrections";			// Corrections needed for UDS Header and Footer styles.
-
+@import "_media-queries"; // Media queries that model those found in Bootstrap 4
+@import "_typography"; // Typography reset based on what is happening within UDS-Bootstrap.
+// @import "_asu-header-footer";		// Styles needed for the ASU header and footer, wrapped in CSS name spaces.
+@import '_component-header'; // Styles for manipulating the component header into the right position.
+@import "_uds-corrections"; // Corrections needed for UDS Header and Footer styles..

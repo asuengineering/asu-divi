@@ -84,6 +84,9 @@ if ( ! function_exists( 'uds_divi_localize_component_header_script' ) ) {
 
 		$cta_buttons = maybe_unserialize($cta_buttons);
 
+		// Parse domain name from site_url() function to include within Search prop.
+		$searchDomain = parse_url( get_site_url(), PHP_URL_HOST );
+
 		// Prep localized array items for wp_localize_script below.
 		$localized_array = 	array(
 			'loggedIn' => is_user_logged_in(),
@@ -111,6 +114,8 @@ if ( ! function_exists( 'uds_divi_localize_component_header_script' ) ) {
 			'parentOrgUrl' => $parent_org_link,
 			'breakpoint' => $mobile_menu_breakpoint,
 			'buttons' => $cta_buttons,
+			'searchUrl' => 'https://search.asu.edu/search',
+			'site' => $searchDomain,
 		);
 
 		// pass WordPress PHP variables to the uds-header-scripts script we enqueued above
