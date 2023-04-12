@@ -41,5 +41,20 @@ allows :scrolled: to be an adjacent sibling again.
 @media screen and (max-width: 600px) {
 	#wpadminbar {
 		position: fixed;
+
+		+#header-container #asuHeader {
+			top: 46px !important;
+		}
 	}
+
+	#header-container+#main-content {
+		margin-top: 115px;
+	}
+
+	#header-container.scrolled+#main-content {
+		margin-top: 115px;
+	}
+
+
+
 }

@@ -3,8 +3,7 @@
 
 
 // Import bootstrap from ASU BS package with an isolated name space.
-#asu-header,
-#asu-footer {
+#asu-react-footer {
 
 	// Apply variable overrides before importing Bootstrap’s Sass files
 	@import '../src/sass/uds-bootstrap/variables/colors';
@@ -35,33 +34,31 @@
 	// To remove values from Bootstrap maps, these must occur between Required and Optional imports.
 
 	// clean the vanilla colors from 'colors' map
-	$colors: map-remove(
-	$colors,
-	'blue',
-	'indigo',
-	'purple',
-	'pink',
-	'red',
-	'orange',
-	'yellow',
-	'green',
-	'teal',
-	'cyan',
-	'gray-dark'
+	$colors: map-remove($colors,
+		'blue',
+		'indigo',
+		'purple',
+		'pink',
+		'red',
+		'orange',
+		'yellow',
+		'green',
+		'teal',
+		'cyan',
+		'gray-dark'
 	);
 
 	// Remove vanilla grayscale colors
-	$grays: map-remove(
-	$grays,
-	'100',
-	'200',
-	'300',
-	'400',
-	'500',
-	'600',
-	'700',
-	'800',
-	'900'
+	$grays: map-remove($grays,
+		'100',
+		'200',
+		'300',
+		'400',
+		'500',
+		'600',
+		'700',
+		'800',
+		'900'
 	);
 
 	// Remove the vanilla primary and secondary brand colors
@@ -132,4 +129,3 @@
 // Encompassing these partials in an additional ID invalidates the rules.
 // @import '../src/sass/uds-bootstrap/extends/globalfooter';
 // @import '../src/sass/uds-bootstrap/extends/global-header';
-

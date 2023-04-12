@@ -26,6 +26,27 @@ a:visited{color:#440e22;text-decoration:none;border-bottom:0}
 #wpadminbar+#header-container #asuHeader{top:32px !important}
 #header-container+#main-content{margin-top:135px}
 #header-container.scrolled+#main-content{margin-top:90px}
+#wrapper-endorsed-footer{background-color:#191919}
+#wrapper-endorsed-footer #endorsed-logo img{width:100%;height:auto;padding:1.5rem 0 1rem 0}
+#wrapper-endorsed-footer #social-media nav{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-bottom:1.5rem}
+#wrapper-endorsed-footer #social-media .nav-link{font-size:2rem;color:#bfbfbf;line-height:1;padding:.5rem 1rem;text-decoration:none}
+#wrapper-footer-columns{background:#191919;border-top:2px solid #393939}
+#wrapper-footer-columns #footer-columns{padding:1.5rem 0}
+#wrapper-footer-columns #info-column h5{color:#fff;margin:1rem 0}
+#wrapper-footer-columns #info-column p.contact-link{padding-bottom:2rem}
+#wrapper-footer-columns #info-column p.contact-link a{color:#fff}
+#wrapper-footer-columns #info-column .contribute-button{margin-bottom:2rem}
+#wrapper-footer-columns #info-column .contribute-button .btn{display:inline-block;font-weight:700;color:#212529;background-color:#ffc627;border-color:#ffc627;text-align:center;text-decoration:none;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;padding:1rem 2rem;font-size:1rem;line-height:1rem;border-radius:400rem;-webkit-transition:.03s ease-in-out;transition:.03s ease-in-out;cursor:pointer}
+#wrapper-footer-columns .flex-footer{display:none}
+#wrapper-footer-innovation{background-color:#ffc627}
+#wrapper-footer-innovation .footer-innovation-links{text-align:center}
+#wrapper-footer-innovation .footer-innovation-links nav{display:grid;grid-template-rows:1fr 1fr 1fr;grid-auto-flow:column;justify-items:start;width:100%;padding:1rem 0}
+#wrapper-footer-innovation .footer-innovation-links nav .nav-link{color:#191919;text-decoration:none;font-weight:700;padding:.5rem 0}
+#wrapper-footer-innovation .footer-innovation-links nav .nav-link:nth-child(n+4){justify-self:end}
+#wrapper-footer-colophon{background-color:#e8e8e8}
+#wrapper-footer-colophon nav{display:grid;grid-template-rows:1fr 1fr 1fr;grid-auto-flow:column;justify-items:start;width:100%;padding:1rem 0}
+#wrapper-footer-colophon nav .nav-link{padding:.5rem 0;text-decoration:none;color:#191919}
+#wrapper-footer-colophon nav .nav-link:nth-child(n+4){justify-self:end}
 #asu-header.fixed-top{position:fixed;top:0;right:0;left:0;z-index:1030}
 #asu-header+div,#asu-header+main{-webkit-transition:.5s cubic-bezier(0.19,1,0.19,1);transition:.5s cubic-bezier(0.19,1,0.19,1);margin-top:113px}
 #asu-header.scrolled+div,#asu-header.scrolled+main{-webkit-transition:.5s cubic-bezier(0.19,1,0.19,1);transition:.5s cubic-bezier(0.19,1,0.19,1);margin-top:97px}
@@ -39,7 +60,23 @@ a:visited{color:#440e22;text-decoration:none;border-bottom:0}
 #asu-header .title .subdomain-name a{color:#191919;text-decoration:none}
 #asu-header .title .subdomain-name a:hover{text-decoration:underline}
 .et_pb_widget li a:hover{text-decoration:underline}
-@media(min-width:calc(992px - .02px)) { #asu-header + div, #asu-header + main { -webkit-transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);transition:.5s cubic-bezier(0.19,1,0.19,1);margin-top:137px}
+@media(min-width:calc(992px)){#wrapper-endorsed-footer .row{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+#wrapper-endorsed-footer #endorsed-logo img{-webkit-box-sizing:border-box;box-sizing:border-box;padding:.5rem 0 .5rem 0;margin-left:-1.625rem;max-height:8rem;width:auto}
+#wrapper-endorsed-footer #social-media nav{padding:2.5rem 0}
+#wrapper-footer-columns .row{display:-webkit-box;display:-ms-flexbox;display:flex;gap:1.5rem}
+#wrapper-footer-columns #info-column{-webkit-box-flex:0;-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}
+#wrapper-footer-columns .flex-footer{display:block;-webkit-box-flex:1;-ms-flex:1 0 1;flex:1 0 1;max-width:100%}
+#wrapper-footer-columns .flex-footer .card-header a{cursor:default;color:#e8e8e8;padding:1.5rem 0;text-decoration:none}
+#wrapper-footer-columns .flex-footer .card-header a svg{display:none}
+#wrapper-footer-columns .flex-footer .card-body{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+#wrapper-footer-columns .flex-footer .card-body .nav-link{padding:0 0 1rem;color:#e8e8e8;line-height:1.5rem;text-decoration:none}
+#wrapper-footer-innovation .footer-innovation-links{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-weight:700}
+#wrapper-footer-innovation .footer-innovation-links nav{display:-webkit-box;display:-ms-flexbox;display:flex}
+#wrapper-footer-innovation .footer-innovation-links nav a{margin-right:1.5rem}
+#wrapper-footer-innovation .footer-innovation-links img{height:100px;width:auto;max-width:none}
+#wrapper-footer-colophon nav{display:-webkit-box;display:-ms-flexbox;display:flex}
+#wrapper-footer-colophon nav a{margin-right:1.5rem}
+}@media(min-width:calc(992px - .02px)) { #asu-header + div, #asu-header + main { -webkit-transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);transition:.5s cubic-bezier(0.19,1,0.19,1);margin-top:137px}
 #asu-header.scrolled+div,#asu-header.scrolled+main{-webkit-transition:.5s cubic-bezier(0.19,1,0.19,1);transition:.5s cubic-bezier(0.19,1,0.19,1);margin-top:81x}
 }@media(min-width:calc(1224px - .02px)){#asu-header.scrolled #header-main .navbar-container.no-links{margin-top:1.5rem}
 #asu-header.scrolled #header-main .navbar-container.no-links .title{margin:0}
@@ -49,6 +86,9 @@ a:visited{color:#440e22;text-decoration:none;border-bottom:0}
 #asu-header.scrolled #header-main .title.subdomain-name{font-size:1.5rem}
 }@media(max-width:calc(1224px - .02px)){#asu-footer #footer-columns .flex-footer{display:none}
 }@media screen and (max-width:600px){#wpadminbar{position:fixed}
+#wpadminbar+#header-container #asuHeader{top:46px !important}
+#header-container+#main-content{margin-top:115px}
+#header-container.scrolled+#main-content{margin-top:115px}
 }@media(max-width:577px){h1{font-size:2.25rem}
 h2{font-size:2rem}
 }
