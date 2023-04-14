@@ -27,6 +27,14 @@ do_action( 'uds_wp_before_global_footer' );
 
 ?>
 
+<footer id="site-footer">
+
+	<div class="wrapper" id="wrapper-endorsed-footer">
+		<?php uds_wp_render_footer_branding_row(); ?>
+	</div> <!-- wrapper-endorsed-footer -->
+
+</footer>
+
 <footer id="asu-react-footer"></footer>
 
 <div id="cookieConsentContainer"></div>

@@ -175,7 +175,7 @@ if ( ! class_exists('UDS_Divi_React_Header_Navtree') ) {
 
 			// Convert $prop back to a string so it can be passed to the next iteration of start_el.
 			$output = maybe_serialize($prop);
-			do_action('qm/debug', $prop);
+			// do_action('qm/debug', $prop);
 
         }
 

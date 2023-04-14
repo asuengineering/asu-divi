@@ -30,10 +30,6 @@ function uds_divi_enqueue_scripts() {
 	wp_enqueue_script ( 'font-awesome-kit', 'https://kit.fontawesome.com/51b562cd96.js', array(), null, false );
 	wp_script_add_data( 'font-awesome-kit', 'crossorigin', 'anonymous' );
 
-	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri() . '/src/js/bootstrap4/bootstrap.min.js', array('jquery'), null, false);
-	// wp_enqueue_script( 'asu-header', get_stylesheet_directory_uri() . '/src/js/uds-bootstrap/global-header.js', array('jquery', 'bootstrap'), null, false);
-
 	wp_enqueue_script ( 'component-header-vendor', get_stylesheet_directory_uri() . '/src/uds-header/js/vendor.umd.js', array( 'wp-element', 'wp-components' ), null, false );
 	wp_enqueue_script ( 'component-header', get_stylesheet_directory_uri() . '/src/uds-header/js/asuHeader.umd.js', array( 'wp-element', 'wp-components' ), null, false );
 	wp_enqueue_script ( 'component-header-init', get_stylesheet_directory_uri() . '/js/asu-header-init.js', array(), null, false );
