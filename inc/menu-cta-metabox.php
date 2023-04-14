@@ -7,7 +7,7 @@
 
 
 // Add custom fields to menu item
-function uds_divi_custom_menu_item_fields( $item_id, $item, $depth, $args ) {
+function uds_divi_cta_menu_item_fields( $item_id, $item, $depth, $args ) {
 
   	// TODO: Check if the current menu being edited is assigned to the "primary" location.
 	// For now, metabox is displayed on all menu items.
@@ -29,10 +29,10 @@ function uds_divi_custom_menu_item_fields( $item_id, $item, $depth, $args ) {
 		<p>Note: Not all button colors are applicable for every location. If your choice of color is not a part of the brand standard, a default color will be displayed instead.</p>
 	<?php
 }
-add_action( 'wp_nav_menu_item_custom_fields', 'uds_divi_custom_menu_item_fields', 10, 4 );
+add_action( 'wp_nav_menu_item_custom_fields', 'uds_divi_cta_menu_item_fields', 10, 4 );
 
 // Save custom fields
-function uds_divi_save_custom_menu_item_fields( $menu_id, $menu_item_db_id, $args ) {
+function uds_divi_save_cta_menu_item_fields( $menu_id, $menu_item_db_id, $args ) {
 
 	if ( isset( $_POST['menu-item-cta-button'][ $menu_item_db_id ] ) ) {
 
@@ -47,4 +47,4 @@ function uds_divi_save_custom_menu_item_fields( $menu_id, $menu_item_db_id, $arg
 	}
 
 }
-add_action( 'wp_update_nav_menu_item', 'uds_divi_save_custom_menu_item_fields', 10, 3 );
+add_action( 'wp_update_nav_menu_item', 'uds_divi_save_cta_menu_item_fields', 10, 3 );
