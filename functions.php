@@ -23,9 +23,6 @@ $uds_wp_includes = array(
 	'/render-partials.php',                     		// Rendering methods for certain customizer-controlled items.
 	'/header-localize-script.php',				 		// Pass header variables to React for rendering.
 	'/footer-localize-script.php'				 		// Pass footer variables to React for rendering.
-	// '/wp-custom-menu.php',                       	// Load custom menu builder functions.
-
-
 );
 
 foreach ( $uds_wp_includes as $file ) {
