@@ -1,0 +1,236 @@
+/*--------------------------------------------------------------
+Component Footer Markup
+
+1. Mobile
+2. Desktop, MD breakpoint
+--------------------------------------------------------------*/
+
+#wrapper-endorsed-footer {
+	background-color: $uds-color-base-gray-7;
+
+	#endorsed-logo img {
+		width: 100%;
+		height: auto;
+		padding: 1.5rem 0 1rem 0;
+	}
+
+	#social-media {
+		nav {
+			display: flex;
+			flex-wrap: wrap;
+			padding-bottom: $uds-size-spacing-3;
+		}
+
+		.nav-link {
+			font-size: 2rem;
+			color: #bfbfbf;
+			line-height: 1;
+			padding: 0.5rem 1rem;
+			text-decoration: none;
+		}
+	}
+}
+
+#wrapper-footer-columns {
+	background: $uds-color-base-gray-7;
+	border-top: 2px solid #393939;
+
+	#footer-columns {
+		padding: $uds-size-spacing-3 0;
+	}
+
+	#info-column {
+		h5 {
+			color: $uds-color-base-white;
+			margin: $uds-size-spacing-2 0;
+		}
+
+		p.contact-link {
+			padding-bottom: $uds-size-spacing-4;
+
+			a {
+				color: $uds-color-base-white;
+			}
+		}
+
+		.contribute-button {
+			margin-bottom: $uds-size-spacing-4;
+
+			.btn {
+				display: inline-block;
+				font-weight: 700;
+				color: #212529;
+				background-color: #ffc627;
+				border-color: #ffc627;
+				text-align: center;
+				text-decoration: none;
+				vertical-align: middle;
+				user-select: none;
+				padding: 1rem 2rem;
+				font-size: 1rem;
+				line-height: 1rem;
+				border-radius: 400rem;
+				transition: 0.03s ease-in-out;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.flex-footer {
+		display: none;
+	}
+}
+
+#wrapper-footer-innovation {
+	background-color: $uds-color-base-gold;
+
+	.footer-innovation-links {
+		text-align: center;
+
+		nav {
+			display: grid;
+			grid-template-rows: 1fr 1fr 1fr;
+			grid-auto-flow: column;
+			justify-items: start;
+			width: 100%;
+			padding: $uds-size-spacing-2 0;
+
+			.nav-link {
+				color: $uds-color-base-gray-7;
+				text-decoration: none;
+				font-weight: 700;
+				padding: $uds-size-spacing-1 0;
+
+				&:nth-child(n + 4) {
+					justify-self: end;
+				}
+			}
+		}
+
+	}
+}
+
+#wrapper-footer-colophon {
+	background-color: $uds-color-base-gray-2;
+
+	nav {
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-auto-flow: column;
+		justify-items: start;
+		width: 100%;
+		padding: $uds-size-spacing-2 0;
+
+		.nav-link {
+			padding: 0.5rem 0;
+			text-decoration: none;
+			color: $uds-color-base-gray-7;
+
+			&:nth-child(n + 4) {
+				justify-self: end;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+2. Desktop, MD breakpoint
+--------------------------------------------------------------*/
+@include media-breakpoint-up($lg) {
+
+	#wrapper-endorsed-footer {
+		.row {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		#endorsed-logo img {
+			box-sizing: border-box;
+			padding: 0.5rem 0 0.5rem 0;
+			margin-left: -1.625rem;
+			max-height: 8rem;
+			width: auto;
+		}
+
+		#social-media nav {
+			padding: 2.5rem 0;
+		}
+	}
+
+	#wrapper-footer-columns {
+
+		.row {
+			display: flex;
+			gap: $uds-size-spacing-3;
+		}
+
+		#info-column {
+			flex: 0 0 25%;
+			max-width: 25%;
+		}
+
+		.flex-footer {
+			display: block;
+			flex: 1 0 1;
+			max-width: 100%;
+			width: 100%;
+
+			.card-header a {
+				cursor: default;
+				color: #e8e8e8;
+				padding: 1.5rem 0;
+				text-decoration: none;
+
+				svg {
+					display: none;
+				}
+			}
+
+			.card-body {
+				display: flex;
+				flex-direction: column;
+
+				.nav-link {
+					padding: 0 0 1rem;
+					color: $uds-color-base-gray-2;
+					line-height: 1.5rem;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	#wrapper-footer-innovation {
+
+		.footer-innovation-links {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-weight: 700;
+
+			nav {
+				display: flex;
+
+				a {
+					margin-right: $uds-size-spacing-3;
+				}
+			}
+
+			img {
+				height: 100px;
+				width: auto;
+				max-width: none;
+			}
+		}
+	}
+
+	#wrapper-footer-colophon {
+		nav {
+			display: flex;
+
+			a {
+				margin-right: $uds-size-spacing-3;
+			}
+		}
+	}
+}

@@ -1,48 +1,51 @@
 {
-  "name": "asu-divi-child-theme",
-  "version": "0.1.0",
-  "description": "ASU Divi Child Theme",
-  "main": "index.js",
-  "repository": "git://github.com/asuengineering/asu-divi",
-  "bugs": {
-    "url": "https://github.com/asuengineering/asu-divi/issues"
+  "name": "pitchfork-people",
+  "description": "ASU Engineering plugin for WordPress",
+  "version": "0.0.1",
+  "repository": "ASUEngineering/pitchfork-people",
+  "license": "MIT",
+  "devDependencies": {
+    "@asu/component-cookie-consent": "latest",
+    "@asu/component-footer": "latest",
+    "@asu/component-header": "latest",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/register": "^7.0.0",
+    "beepbeep": "^1.2.2",
+    "browser-sync": "^2.11.1",
+    "eslint": "^7.12.0",
+    "eslint-config-wordpress": "^2.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-concat": "^2.5.2",
+    "gulp-filter": "^6.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-remember": "^1.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-rtlcss": "^1.2.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sort": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifycss": "^1.0.6",
+    "gulp-wp-pot": "^2.0.7",
+    "gulp-zip": "^5.0.2"
   },
   "scripts": {
-    "build": "gulp compile",
-    "postinstall": "gulp copy-assets"
-  },
-  "engines": {
-    "node": ">=10",
-    "npm": ">=2.1.8"
-  },
-  "keywords": [
-    "wordpress",
-    "theme",
-    "framework"
-  ],
-  "dependencies": {
-    "bootstrap": "^4.6.0",
-    "preact": "^10.5.13"
-  },
-  "devDependencies": {
-    "@asu-design-system/bootstrap4-theme": "dev",
-    "@asu-design-system/cookie-consent": "dev",
-    "@asu-design-system/design-tokens": "dev",
-    "@babel/core": "^7.13.14",
-    "@babel/preset-env": "^7.13.12",
-    "autoprefixer": "^9.8.6",
-    "browser-sync": "^2.26.12",
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2"
+    "start": "gulp",
+    "zip": "gulp zip",
+    "styles": "gulp styles",
+    "images": "gulp images",
+    "js-custom": "gulp customJS",
+    "js-vendors": "gulp vendorsJS",
+    "translate": "gulp translate",
+    "styles-rtl": "gulp stylesRTL",
+    "cache-clear": "gulp clearCache"
   }
 }

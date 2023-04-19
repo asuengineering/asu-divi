@@ -71,8 +71,16 @@ if ( ! class_exists( 'WP_Social_Media_Walker' ) ) {
 
 			$title = apply_filters( 'the_title', $item->title, $item->ID );
 
+			$social_icon = get_post_meta( $item->ID, '_menu_item_social_icon', true );
+
+			if (empty($social_icon)) {
+				$social_icon = 'fa-solid fa-square-question';
+			} else {
+				$social_icon = 'fa-brands ' . $social_icon;
+			}
+
 			$item_output = $args->before
-				. "<a id='menu-item-$item->ID' $class_names $attributes ><span class='fab $title'>"
+				. "<a id='menu-item-$item->ID' $class_names $attributes ><span class='$social_icon'>"
 				. '</span></a> '
 				. $args->after;
 
