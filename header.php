@@ -93,12 +93,14 @@ if ( ! empty( $c_options['hotjar_site_id'] ) ) {
 <body <?php body_class(); ?> <?php uds_wp_body_attributes(); ?>>
 
 	<?php
-	do_action( 'wp_body_open' );
 
 	// Site Google Tag Manager (noscript).
 	if ( ! empty( $site_gtm_container_id ) ) {
 		include get_stylesheet_directory() . '/inc/analytics/google-tag-manager-noscript-code.php';
 	}
+
+	do_action( 'wp_body_open' );
+
 	?>
 
 	<header id="asu-header" class="fixed-top">
