@@ -56,10 +56,10 @@ function uds_divi_social_menu_item_fields( $item_id, $item, $depth, $args, $curr
 			<option value="" <?php selected( $selected_value, '' ); ?>>Select an icon</option>
 			<option value="fa-square-behance" <?php selected( $selected_value, 'fa-square-behance' ); ?>>Behance</option>
 			<option value="fa-square-facebook" <?php selected( $selected_value, 'fa-square-facebook' ); ?>>Facebook</option>
-			<option value="fa-flikr" <?php selected( $selected_value, 'fa-flikr' ); ?>>Flikr</option>
+			<option value="fa-flickr" <?php selected( $selected_value, 'fa-flickr' ); ?>>Flickr</option>
 			<option value="fa-square-github" <?php selected( $selected_value, 'fa-square-github' ); ?>>GitHub</option>
 			<option value="fa-square-instagram" <?php selected( $selected_value, 'fa-square-instagram' ); ?>>Instagram</option>
-			<option value="fa-square-linkedin" <?php selected( $selected_value, 'fa-square-linkedin' ); ?>>LinkedIn</option>
+			<option value="fa-linkedin" <?php selected( $selected_value, 'fa-linkedin' ); ?>>LinkedIn</option>
 			<option value="fa-square-pinterest" <?php selected( $selected_value, 'fa-square-pinterest' ); ?>>Pinterest</option>
 			<option value="fa-researchgate" <?php selected( $selected_value, 'fa-researchgate' ); ?>>ResearchGate</option>
 			<option value="fa-tiktok" <?php selected( $selected_value, 'fa-tiktok' ); ?>>TikTok</option>
