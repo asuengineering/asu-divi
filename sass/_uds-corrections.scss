@@ -6,11 +6,11 @@
 --------------------------------------------------------------*/
 // Fixed top utility is being applied to the wrong ID.
 #asu-header.fixed-top {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1030;
 }
 
 /*--------------------------------------------------------------
@@ -19,14 +19,14 @@
 // Margins are needed to prevent content from flowing under global header.
 
 // Mobile
-#asu-header + div,
-#asu-header + main {
+#asu-header+div,
+#asu-header+main {
 	transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
 	margin-top: 113px;
 }
 
-#asu-header.scrolled + div,
-#asu-header.scrolled + main {
+#asu-header.scrolled+div,
+#asu-header.scrolled+main {
 	transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
 	margin-top: 97px;
 }
@@ -34,14 +34,14 @@
 // Desktop
 @media (min-width: calc(992px - .02px)) {
 
-	#asu-header + div,
-	#asu-header + main {
+	#asu-header+div,
+	#asu-header+main {
 		transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
 		margin-top: 137px;
 	}
 
-	#asu-header.scrolled + div,
-	#asu-header.scrolled + main {
+	#asu-header.scrolled+div,
+	#asu-header.scrolled+main {
 		transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
 		margin-top: 81x;
 	}
@@ -61,78 +61,71 @@
 }
 
 #asu-header.scrolled {
-  #wrapper-header-top {
-    height: 0;
-    overflow: hidden;
-  }
+	#wrapper-header-top {
+		height: 0;
+		overflow: hidden;
+	}
 
-  #header-top {
-    height: 0;
-    overflow: hidden;
-  }
+	#header-top {
+		height: 0;
+		overflow: hidden;
+	}
 
-  #header-main {
-    .navbar-brand .horiz {
-      margin-bottom: $uds-size-spacing-1;
-    }
+	#header-main {
+		.navbar-brand .horiz {
+			margin-bottom: $uds-size-spacing-1;
+		}
 
-    .navbar-brand .vert {
-      margin: 12px $uds-size-spacing-2 12px 0;
-      padding: $uds-size-spacing-half 0;
-      height: 64px;
-    }
+		.navbar-brand .vert {
+			margin: 12px $uds-size-spacing-2 12px 0;
+			padding: $uds-size-spacing-half 0;
+			height: 64px;
+		}
 
-    .title {
-      padding-bottom: $uds-size-spacing-2;
+		.title {
+			padding-bottom: $uds-size-spacing-2;
 
-      .unit-name {
-        display: none;
-      }
-    }
-  }
+			.unit-name {
+				display: none;
+			}
+		}
+	}
 }
 
 // Scrolled, desktop
 @media (min-width: calc(1224px - .02px)) {
-  #asu-header.scrolled {
+	#asu-header.scrolled {
 
-    #header-main .navbar-container.no-links {
-      margin-top: $uds-size-spacing-3;
-      .title {
-        margin: 0;
-      }
-    }
+		#header-main .navbar-container.no-links {
+			margin-top: $uds-size-spacing-3;
 
-    .navbar-nav {
-      .nav-link,
-      .dropdown .nav-link {
-        padding-top: 0;
-      }
-    }
+			.title {
+				margin: 0;
+			}
+		}
 
-    #header-main .navbar-brand .vert {
-      padding: 0;
-    }
+		.navbar-nav {
 
-    #header-main .title {
-      padding-bottom: 0;
-      margin: 12px 0;
-    }
+			.nav-link,
+			.dropdown .nav-link {
+				padding-top: 0;
+			}
+		}
 
-    #header-main .title.subdomain-name {
-      font-size: $uds-size-font-xl;
-    }
-  }
-}
+		#header-main .navbar-brand .vert {
+			padding: 0;
+		}
 
-/*--------------------------------------------------------------
-4. Hide accordion footer menus on tablet and below.
---------------------------------------------------------------*/
-@media (max-width: calc(1224px - .02px)) {
-	#asu-footer #footer-columns .flex-footer {
-		display:none;
+		#header-main .title {
+			padding-bottom: 0;
+			margin: 12px 0;
+		}
+
+		#header-main .title.subdomain-name {
+			font-size: $uds-size-font-xl;
+		}
 	}
-};
+}
 
 
 /*--------------------------------------------------------------
@@ -153,5 +146,5 @@
 --------------------------------------------------------------*/
 
 .et_pb_widget li a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }

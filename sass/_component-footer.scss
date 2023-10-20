@@ -365,12 +365,6 @@ footer {}
 
 #wrapper-endorsed-footer {
 
-	#endorsed-logo img {
-		width: 100%;
-		height: auto;
-		padding: 1.5rem 0 1rem 0;
-	}
-
 	#social-media {
 		nav {
 			display: flex;
@@ -389,6 +383,9 @@ footer {}
 }
 
 #wrapper-footer-columns {
+
+	border-top: 2px solid #393939;
+
 	#footer-columns #info-column .contact-link {
 		padding-bottom: 0;
 	}
@@ -516,5 +513,9 @@ footer {}
 				}
 			}
 		}
+	}
+
+	#footer-innovation .footer-innovation-links {
+		display: flex;
 	}
 }
