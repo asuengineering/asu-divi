@@ -1,12 +1,369 @@
-/*--------------------------------------------------------------
-Component Footer Markup
+/*------------------------------------------------------------------
+Footer - Table of Contents
+(When updating, be sure to replace media breakpoint references with variables.)
 
-1. Mobile
-2. Desktop, MD breakpoint
---------------------------------------------------------------*/
+1. Component Level Mixins
+2. Global Footer Rules
+3. Wrapper Base Colors
+4. Endorsed Footer (#endorsed-footer)
+5. Footer Columns (#footer-columns)
+6. Footer Innovation (#footer-innovation)
+7. Footer Colophon (#footer-colophon)
+
+8. Overrides specifically for this theme.
+9. Media queery overrides for desktop. Still this theme.
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+1. Component Level Mixins
+--------------------------------------------------------------------*/
+
+@mixin footer-links {
+	color: $uds-color-base-gray-2;
+	line-height: $uds-size-spacing-3;
+	text-decoration: none;
+
+	&:hover {
+		color: $uds-color-base-gold;
+		text-decoration: underline;
+	}
+}
+
+@mixin nav-to-grid {
+	.nav {
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-auto-flow: column;
+		justify-items: start;
+		width: 100%;
+	}
+
+	.nav-link {
+		margin-right: 0;
+		padding: 0.5rem 0;
+
+		&:nth-child(n + 4) {
+			justify-self: end;
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+2. Global Footer Rules
+--------------------------------------------------------------------*/
+
+footer {}
+
+/*------------------------------------------------------------------
+3. Wrapper Base Colors
+--------------------------------------------------------------------*/
+
+#wrapper-endorsed-footer,
+#wrapper-footer-columns {
+	background: $uds-color-divider-darker;
+
+	h5 {
+		color: $uds-color-base-white;
+	}
+}
 
 #wrapper-endorsed-footer {
-	background-color: $uds-color-base-gray-7;
+	a {
+		color: $uds-color-base-gray-2;
+	}
+}
+
+#wrapper-endorsed-footer+#wrapper-footer-columns {
+	border-top: 2px solid $uds-color-divider-lighter;
+}
+
+#wrapper-footer-innovation {
+	background-color: $uds-color-base-gold;
+
+	a {
+		margin-right: $uds-size-spacing-3;
+		text-decoration: none;
+		color: $uds-color-base-gray-7;
+	}
+}
+
+#wrapper-footer-colophon {
+	background-color: $uds-color-base-gray-2;
+
+	a {
+		margin-right: $uds-size-spacing-3;
+		text-decoration: none;
+		color: $uds-color-base-gray-7;
+	}
+}
+
+/*------------------------------------------------------------------
+4. Endorsed Footer (#endorsed-footer)
+--------------------------------------------------------------------*/
+
+// #endorsed-footer, mobile first design
+
+#endorsed-logo img {
+	width: 100%;
+	height: auto;
+
+	/* Transform here scales an image which has embedded padding so that
+	it aligns with the Bootstrap grid. */
+	transform: scale(1.13);
+
+	/* Once transformed, the endorsed logo will have approx 20px of vertical
+	"padding" between the top of the logo and black section border. Adding
+	12px provides an approximate 2rem top/bottom margin. */
+
+	margin: 12px 0;
+}
+
+#endorsed-footer {
+	#social-media {
+		.nav {
+			padding-bottom: $uds-size-spacing-3;
+		}
+
+		.nav-link {
+			font-size: $uds-size-icon-base;
+			color: $uds-color-base-gray-4;
+			line-height: 1;
+			padding-top: 7px; // Magic number. Reducing the padding by 1px to make the height = 48px.
+		}
+	}
+}
+
+// #endorsed-footer, only on mobile
+@include media-breakpoint-down($sm) {
+	#endorsed-footer #social-media .nav-link:first-child {
+		padding-left: 0;
+	}
+}
+
+// #endorsed-footer, up to desktop
+@include media-breakpoint-up($md) {
+	#endorsed-logo {
+		display: flex;
+		align-items: center;
+
+		img {
+			box-sizing: border-box;
+			padding: 0.5rem 0 0.5rem 0;
+			max-height: $uds-size-spacing-14;
+			width: auto;
+		}
+	}
+
+	#social-media .nav {
+		padding: $uds-size-spacing-5 0;
+		justify-content: flex-end;
+
+		.nav-link:last-child {
+			padding-right: 0;
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+5. Footer Columns (#footer-columns)
+--------------------------------------------------------------------*/
+
+// #footer-columns, mobile first design
+
+#footer-columns {
+	#info-column {
+		.contact-link {
+			margin-bottom: $uds-size-spacing-4;
+
+			a {
+				@include footer-links;
+				text-decoration: underline;
+			}
+		}
+
+		.contribute-button {
+			margin-bottom: $uds-size-spacing-3;
+		}
+	}
+
+	.flex-footer {
+
+		.accordion-item,
+		.accordion-header,
+		.accordion-body {
+			background: $uds-color-divider-darker;
+			color: $uds-color-base-white;
+			border: 0;
+		}
+
+		.accordion-foldable {
+			margin: 0;
+		}
+
+		.accordion-header {
+			border-top: 1px solid $uds-color-divider-lighter;
+			padding-left: 0;
+
+			a {
+				color: $uds-color-base-gray-2;
+				padding: $uds-size-spacing-3 0;
+				text-decoration: none;
+
+				&:hover {
+					background: $uds-color-divider-darker;
+				}
+			}
+		}
+
+		.accordion-body {
+			padding: 0 0 0 $uds-size-spacing-3;
+
+			.nav-link {
+				color: $uds-color-base-white;
+				padding: 0 0 $uds-size-spacing-2;
+				@include footer-links;
+			}
+		}
+	}
+}
+
+// #footer-columns, up to desktop
+
+@include media-breakpoint-up($xl) {
+	#footer-columns {
+		padding-top: $uds-size-spacing-6;
+		padding-bottom: $uds-size-spacing-6;
+
+		h5 {
+			margin: 0 0 $uds-size-spacing-3 0;
+		}
+
+		.flex-footer {
+			.accordion-header {
+				border-top: 0;
+				padding: 0;
+
+				a {
+					padding: 0;
+					cursor: default;
+				}
+
+				span {
+					display: none;
+				}
+			}
+
+			.accordion-body {
+				padding: 0;
+				transition-delay: 0;
+
+				&.collapse:not(.show) {
+					display: block;
+					min-height: auto;
+				}
+			}
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+6. Footer Innovation (#footer-innovation)
+--------------------------------------------------------------------*/
+
+// #footer-innovtion, uses desktop first design for accessibility reasons.
+
+#footer-innovation {
+	.footer-innovation-links {
+		justify-content: space-between;
+		align-items: center;
+		font-weight: 700;
+
+		.img-link {
+			order: 2;
+			margin-right: 0;
+			transform: translate(1.5rem, 0);
+
+			img {
+				height: 100px;
+				width: auto;
+			}
+		}
+
+		.nav-link {
+			padding: 0;
+		}
+	}
+}
+
+@include media-breakpoint-down($lg) {
+	#footer-innovation {
+		.footer-innovation-links {
+			flex-direction: column;
+			padding: $uds-size-spacing-1 0 $uds-size-spacing-1 0;
+
+			.img-link {
+				margin-right: 0;
+				transform: none;
+
+				img {
+					width: 100%;
+					height: auto;
+					order: -1;
+				}
+			}
+
+			@include nav-to-grid;
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+7. Footer Colophon (#footer-colophon)
+--------------------------------------------------------------------*/
+
+// #footer-colophon, uses desktop first design to mirror #footer-innovation
+
+#wrapper-footer-colophon .colophon {
+	margin: $uds-size-spacing-2 0;
+}
+
+#footer-colophon .nav-link {
+	padding: 0;
+}
+
+// #footer-colophon, Mobile
+
+@include media-breakpoint-down($md) {
+	#footer-colophon {
+		@include nav-to-grid;
+	}
+}
+
+/*------------------------------------------------------------------
+8. Adjustments for ASU Divi
+(Steps 1-7 above taken straight from UDS BS5)
+--------------------------------------------------------------------*/
+
+#wrapper-endorsed-footer,
+#wrapper-footer-columns {
+	background: $uds-color-divider-darker;
+
+	.container {
+		padding: 1rem 0;
+	}
+
+
+	div.h5 {
+		color: $uds-color-base-white;
+		font-size: 1rem;
+		line-height: 1.5rem;
+		letter-spacing: -0.015rem;
+		font-weight: 700;
+		margin: 1rem 0;
+	}
+}
+
+#wrapper-endorsed-footer {
 
 	#endorsed-logo img {
 		width: 100%;
@@ -32,111 +389,72 @@ Component Footer Markup
 }
 
 #wrapper-footer-columns {
-	background: $uds-color-base-gray-7;
-	border-top: 2px solid #393939;
-
-	#footer-columns {
-		padding: $uds-size-spacing-3 0;
+	#footer-columns #info-column .contact-link {
+		padding-bottom: 0;
 	}
 
-	#info-column {
-		h5 {
-			color: $uds-color-base-white;
-			margin: $uds-size-spacing-2 0;
+	.contribute-button a.btn {
+		display: inline-block;
+		padding: 1rem 2rem;
+		font-size: 1rem;
+		font-weight: 700;
+		line-height: 1rem;
+		color: #191919;
+		text-align: center;
+		text-decoration: none;
+		vertical-align: middle;
+		cursor: pointer;
+		user-select: none;
+		border: 1px solid #ffc627;
+		border-radius: 400rem;
+		background-color: #ffc627;
+		transition: .03s ease-in-out;
+	}
+
+	#footer-columns .accordion-header {
+		border-top: 0px;
+
+		a:hover {
+			cursor: default;
+			background-color: transparent;
 		}
 
-		p.contact-link {
-			padding-bottom: $uds-size-spacing-4;
-
-			a {
-				color: $uds-color-base-white;
-			}
-		}
-
-		.contribute-button {
-			margin-bottom: $uds-size-spacing-4;
-
-			.btn {
-				display: inline-block;
-				font-weight: 700;
-				color: #212529;
-				background-color: #ffc627;
-				border-color: #ffc627;
-				text-align: center;
-				text-decoration: none;
-				vertical-align: middle;
-				user-select: none;
-				padding: 1rem 2rem;
-				font-size: 1rem;
-				line-height: 1rem;
-				border-radius: 400rem;
-				transition: 0.03s ease-in-out;
-				cursor: pointer;
-			}
+		svg {
+			display: none;
 		}
 	}
 
-	.flex-footer {
+	#footer-columns .accordion-item .accordion-body {
+		padding-left: 0;
+
+		.nav-link {
+			display: block;
+		}
+	}
+}
+
+// Hide flex columns on mobile to avoid implementing accordion CSS.
+@media (max-width: calc(992px - .02px)) {
+	#wrapper-footer-columns #footer-columns .flex-footer {
 		display: none;
 	}
 }
 
-#wrapper-footer-innovation {
-	background-color: $uds-color-base-gold;
-
-	.footer-innovation-links {
-		text-align: center;
-
-		nav {
-			display: grid;
-			grid-template-rows: 1fr 1fr 1fr;
-			grid-auto-flow: column;
-			justify-items: start;
-			width: 100%;
-			padding: $uds-size-spacing-2 0;
-
-			.nav-link {
-				color: $uds-color-base-gray-7;
-				text-decoration: none;
-				font-weight: 700;
-				padding: $uds-size-spacing-1 0;
-
-				&:nth-child(n + 4) {
-					justify-self: end;
-				}
-			}
-		}
-
-	}
-}
-
 #wrapper-footer-colophon {
-	background-color: $uds-color-base-gray-2;
+	.container {
+		padding: 1rem 0;
+	}
 
-	nav {
-		display: grid;
-		grid-template-rows: 1fr 1fr 1fr;
-		grid-auto-flow: column;
-		justify-items: start;
-		width: 100%;
-		padding: $uds-size-spacing-2 0;
-
-		.nav-link {
-			padding: 0.5rem 0;
-			text-decoration: none;
-			color: $uds-color-base-gray-7;
-
-			&:nth-child(n + 4) {
-				justify-self: end;
-			}
-		}
+	.colophon {
+		margin: 0;
 	}
 }
+
 
 /*--------------------------------------------------------------
-2. Desktop, MD breakpoint
+9. Desktop, MD breakpoint
 --------------------------------------------------------------*/
-@include media-breakpoint-up($lg) {
+@include media-breakpoint-up($md) {
 
 	#wrapper-endorsed-footer {
 		.row {
@@ -147,7 +465,7 @@ Component Footer Markup
 		#endorsed-logo img {
 			box-sizing: border-box;
 			padding: 0.5rem 0 0.5rem 0;
-			margin-left: -1.625rem;
+			// margin-left: -1.625rem;
 			max-height: 8rem;
 			width: auto;
 		}
@@ -196,40 +514,6 @@ Component Footer Markup
 					line-height: 1.5rem;
 					text-decoration: none;
 				}
-			}
-		}
-	}
-
-	#wrapper-footer-innovation {
-
-		.footer-innovation-links {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			font-weight: 700;
-
-			nav {
-				display: flex;
-
-				a {
-					margin-right: $uds-size-spacing-3;
-				}
-			}
-
-			img {
-				height: 100px;
-				width: auto;
-				max-width: none;
-			}
-		}
-	}
-
-	#wrapper-footer-colophon {
-		nav {
-			display: flex;
-
-			a {
-				margin-right: $uds-size-spacing-3;
 			}
 		}
 	}
