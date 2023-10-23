@@ -17,4 +17,4 @@ Please also note that this repository contains a child theme and not a stand-alo
 
 This child theme is also featured in a distributed WordPress installation within ASU's preferred web host Pantheon. To build a site using Pantheon and UDS Divi please contact the Marketing and Communications team within the Fulton Schools of Engineering.
 
-![Sparky's Trident](https://brandguide.asu.edu/sites/default/files/styles/panopoly_image_original/public/asu_brandhq_images_master_pitchfork_0.png?itok=CdnAzLZW)
+![Sparky's Trident](https://brandguide.asu.edu/sites/default/files/inline-images/220323-ASU-BrandGuide-SpiritMarks-SparkyPitchfork.jpeg)
