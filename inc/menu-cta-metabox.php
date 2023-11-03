@@ -64,9 +64,9 @@ function uds_divi_social_menu_item_fields( $item_id, $item, $depth, $args, $curr
 			<option value="fa-researchgate" <?php selected( $selected_value, 'fa-researchgate' ); ?>>ResearchGate</option>
 			<option value="fa-tiktok" <?php selected( $selected_value, 'fa-tiktok' ); ?>>TikTok</option>
 			<option value="fa-square-tumblr" <?php selected( $selected_value, 'fa-square-tumblr' ); ?>>Tumblr</option>
-			<option value="fa-square-twitter" <?php selected( $selected_value, 'fa-square-twitter' ); ?>>Twitter</option>
 			<option value="fa-square-vimeo" <?php selected( $selected_value, 'fa-square-vimeo' ); ?>>Vimeo</option>
 			<option value="fa-wordpress" <?php selected( $selected_value, 'fa-wordpress' ); ?>>WordPress</option>
+			<option value="fa-square-x-twitter" <?php selected( $selected_value, 'fa-square-twitter' ); ?>>X (formerly Twitter)</option>
 			<option value="fa-square-youtube" <?php selected( $selected_value, 'fa-square-youtube' ); ?>>YouTube</option>
 		</select>
 		</p>
