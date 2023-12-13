@@ -9,11 +9,11 @@
 From bootstrap4-theme/src/scss/variables/_typography.scss
 --------------------------------------- */
 $font-family-sans-serif: Arial,
-Helvetica,
-'Nimbus Sans L',
-'Liberation Sans',
-FreeSans,
-sans-serif;
+	Helvetica,
+	'Nimbus Sans L',
+	'Liberation Sans',
+	FreeSans,
+	sans-serif;
 
 $font-family-base: $font-family-sans-serif;
 
@@ -93,7 +93,7 @@ h1 {
 
 h2 {
 	font-size: 2.5rem;
-	letter-spacing:-0.035em;
+	letter-spacing: -0.035em;
 
 	@media (max-width: 577px) {
 		font-size: 2rem;
@@ -102,17 +102,17 @@ h2 {
 
 h3 {
 	font-size: 1.5rem;
-	letter-spacing:-0.035em;
+	letter-spacing: -0.035em;
 }
 
 h4 {
 	font-size: 1.25rem;
-	letter-spacing:-0.025em;
+	letter-spacing: -0.025em;
 }
 
 h5 {
 	font-size: 1rem;
-	letter-spacing:-0.015em;
+	letter-spacing: -0.015em;
 }
 
 h1 span.highlight,
@@ -123,18 +123,24 @@ h4 span.highlight {
 		box-shadow: -.15em 0 0 $uds-color-base-gold, .15em 0 0 $uds-color-base-gold;
 		background: $uds-color-base-gold;
 		color: $uds-color-base-gray-7;
+		box-decoration-break: clone;
+		-webkit-box-decoration-break: clone;
 	}
 
 	&-black {
 		box-shadow: -.15em 0 0 $uds-color-base-gray-7, .15em 0 0 $uds-color-base-gray-7;
 		background: $uds-color-base-gray-7;
 		color: $uds-color-base-white;
+		box-decoration-break: clone;
+		-webkit-box-decoration-break: clone;
 	}
 
 	&-white {
 		box-shadow: -.15em 0 0 $uds-color-base-white, .15em 0 0 $uds-color-base-white;
 		background: $uds-color-base-white;
 		color: $uds-color-base-gray-7;
+		box-decoration-break: clone;
+		-webkit-box-decoration-break: clone;
 	}
 }
 
@@ -143,57 +149,63 @@ Link colors from various places within UDS Bootstrap.
 --------------------------------------- */
 
 a {
-    color: #8c1d40;
-    text-decoration: underline;
-    background-color: transparent;
+	color: #8c1d40;
+	text-decoration: underline;
+	background-color: transparent;
 	border-bottom: none;
 }
 
 a:hover {
-    color: #8c1d40;
-    text-decoration: none;
-	border-bottom:none;
+	color: #8c1d40;
+	text-decoration: none;
+	border-bottom: none;
 }
 
 a:visited {
-    color: #440e22;
-    text-decoration: none;
-	border-bottom:none;
+	color: #440e22;
+	text-decoration: none;
+	border-bottom: none;
 }
 
 // Stronger rules to enforce underlines within various Divi places.
 // Syntax taken from native Divi stylesheet.
-.et_pb_portfolio_item .et_pb_module_header a, .et_pb_portfolio_item h3 a, .et_pb_post .entry-title a, .et_pb_post h2 a {
-    text-decoration: underline;
-	border-bottom:none;
+.et_pb_portfolio_item .et_pb_module_header a,
+.et_pb_portfolio_item h3 a,
+.et_pb_post .entry-title a,
+.et_pb_post h2 a {
+	text-decoration: underline;
+	border-bottom: none;
 }
 
-.et_pb_portfolio_item .et_pb_module_header a:hover, .et_pb_portfolio_item h3 a:hover, .et_pb_post .entry-title a:hover, .et_pb_post h2 a:hover {
-    text-decoration: none;
-	border-bottom:none;
+.et_pb_portfolio_item .et_pb_module_header a:hover,
+.et_pb_portfolio_item h3 a:hover,
+.et_pb_post .entry-title a:hover,
+.et_pb_post h2 a:hover {
+	text-decoration: none;
+	border-bottom: none;
 }
 
 /* -------------------------------------
-Button colors, overwrite classes. 
-Divi settings don't work, apparently. :-/ 
+Button colors, overwrite classes.
+Divi settings don't work, apparently. :-/
 --------------------------------------- */
 
 #main-content .et_pb_button_module_wrapper a.et_pb_button.button-maroon {
-    color: $uds-color-base-white !important;
-    background-color: $uds-color-base-maroon;
+	color: $uds-color-base-white !important;
+	background-color: $uds-color-base-maroon;
 }
 
 #main-content .et_pb_button_module_wrapper a.et_pb_button.button-gold {
-    color: $uds-color-base-gray-7 !important;
-    background-color: $uds-color-base-gold;
+	color: $uds-color-base-gray-7 !important;
+	background-color: $uds-color-base-gold;
 }
 
 #main-content .et_pb_button_module_wrapper a.et_pb_button.button-dark {
-    color: $uds-color-base-white !important;
-    background-color: $uds-color-base-gray-7;
+	color: $uds-color-base-white !important;
+	background-color: $uds-color-base-gray-7;
 }
 
 #main-content .et_pb_button_module_wrapper a.et_pb_button.button-gray {
-    color: $uds-color-base-gray-7 !important;
-    background-color: $uds-color-base-gray-4;
+	color: $uds-color-base-gray-7 !important;
+	background-color: $uds-color-base-gray-4;
 }
