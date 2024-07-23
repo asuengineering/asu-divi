@@ -406,6 +406,10 @@ footer {}
 		border-radius: 400rem;
 		background-color: #ffc627;
 		transition: .03s ease-in-out;
+
+		&:hover {
+			transform: scale(1.05);
+		}
 	}
 
 	#footer-columns .accordion-header {
