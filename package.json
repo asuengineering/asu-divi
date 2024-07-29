@@ -1,7 +1,7 @@
 {
   "name": "asu-divi",
   "description": "An ASU Engineering child theme for Divi. Incorporates the component header and footer elements from ASU's Unity Design Kit.",
-  "version": "3.3.1",
+  "version": "3.3.1-beta1",
   "repository": "asuengineering/asu-divi",
   "license": "MIT",
   "dependencies": {

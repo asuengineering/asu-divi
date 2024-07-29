@@ -19,6 +19,7 @@ $nav_menu_enabled      = '';
 
 // retrieve settings from the theme mods entry in the options database table.
 $c_options = get_theme_mods();
+do_action('qm/debug', $c_options);
 
 // Is navigation menu enabled?
 if ( ! empty( $c_options['header_navigation_menu'] ) ) {
@@ -69,24 +70,24 @@ if ( ! empty( $c_options['hotjar_site_id'] ) ) {
 	}
 
 	// ASU Hub Analytics.
-	if ( ! empty( $asu_hub_analytics ) && 'enabled' === $asu_hub_analytics ) {
-		include get_stylesheet_directory() . '/inc/analytics/asu-hub-analytics-tracking-code.php';
-	}
+	// if ( ! empty( $asu_hub_analytics ) && 'enabled' === $asu_hub_analytics ) {
+	// 	include get_stylesheet_directory() . '/inc/analytics/asu-hub-analytics-tracking-code.php';
+	// }
 
 	// Site Google Tag Manager.
-	if ( ! empty( $site_gtm_container_id ) ) {
-		include get_stylesheet_directory() . '/inc/analytics/google-tag-manager-tracking-code.php';
-	}
+	// if ( ! empty( $site_gtm_container_id ) ) {
+	// 	include get_stylesheet_directory() . '/inc/analytics/google-tag-manager-tracking-code.php';
+	// }
 
 	// Site Google Analytics.
-	if ( ! empty( $site_ga_tracking_id ) ) {
-		include get_stylesheet_directory() . '/inc/analytics/google-analytics-tracking-code.php';
-	}
+	// if ( ! empty( $site_ga_tracking_id ) ) {
+	// 	include get_stylesheet_directory() . '/inc/analytics/google-analytics-tracking-code.php';
+	// }
 
 	// Hotjar Analytics.
-	if ( ! empty( $hotjar_site_id ) ) {
-		include get_stylesheet_directory() . '/inc/analytics/hotjar-tracking-code.php';
-	}
+	// if ( ! empty( $hotjar_site_id ) ) {
+	// 	include get_stylesheet_directory() . '/inc/analytics/hotjar-tracking-code.php';
+	// }
 	?>
 </head>
 
