@@ -15,6 +15,4 @@ The parent theme for ASU Divi is the [Divi Theme from Elegant Themes](http://www
 
 Please also note that this repository contains a child theme and not a stand-alone theme designed for use with [The Divi Builder](http://www.elegantthemes.com/plugins/divi-builder/) plugin also from Elegant Themes.
 
-This child theme is also featured in a distributed WordPress installation within ASU's preferred web host Pantheon. To build a site using Pantheon and UDS Divi please contact the Marketing and Communications team within the Fulton Schools of Engineering.
-
 ![Sparky's Trident](https://brandguide.asu.edu/sites/default/files/inline-images/220323-ASU-BrandGuide-SpiritMarks-SparkyPitchfork.jpeg)
