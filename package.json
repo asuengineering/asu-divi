@@ -5,9 +5,8 @@
   "repository": "asuengineering/asu-divi",
   "license": "MIT",
   "dependencies": {
-    "gulp-wp": "0.6.9",
-    "@asu/component-cookie-consent": "latest",
     "@asu/component-footer": "latest",
-    "@asu/component-header": "latest"
+    "@asu/component-header": "latest",
+    "gulp-wp": "0.6.9"
   }
 }
