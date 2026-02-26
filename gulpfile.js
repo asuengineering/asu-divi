@@ -25,15 +25,10 @@ gulp.task("upboot", function (done) {
 		"dev": "./src",
 	};
 
-	// Copy UDS component-header JS files
+	// UDS component-header-footer JS files
 	gulp
-		.src(paths.node + "/@asu/component-header/dist/**/*")
-		.pipe(gulp.dest(paths.dev + "/uds-header/js"));
-
-	// Copy UDS component-footer JS files
-	gulp
-		.src(paths.node + "/@asu/component-footer/dist/**/*")
-		.pipe(gulp.dest(paths.dev + "/uds-footer/js"));
+		.src(paths.node + "/@asu/component-header-footer/dist/**/*")
+		.pipe(gulp.dest(paths.dev + "/component-header-footer/"));
 
 	done();
 });
