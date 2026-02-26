@@ -2,11 +2,12 @@
 /*!****************************************!*\
   !*** ./src/scripts/asu-header-init.js ***!
   \****************************************/
-// console.log(udsHeaderVars.navTree);
-// console.log(exampleNavTree);
+/*
+Initialize ASU React Header.
+*/
 
 window.addEventListener("DOMContentLoaded", event => {
-  AsuHeader.initGlobalHeader({
+  AsuHeaderFooter.initGlobalHeader({
     targetSelector: "#header-container",
     props: {
       loggedIn: udsHeaderVars.loggedIn,
@@ -14,6 +15,7 @@ window.addEventListener("DOMContentLoaded", event => {
       loginLink: udsHeaderVars.loginLink,
       userName: udsHeaderVars.userName,
       navTree: udsHeaderVars.navTree,
+      // navTree: exampleNavTree,
       title: udsHeaderVars.title,
       baseUrl: udsHeaderVars.baseUrl,
       logo: udsHeaderVars.logo,

@@ -30,13 +30,20 @@ function uds_divi_enqueue_scripts() {
 	wp_enqueue_script ( 'font-awesome-kit', 'https://kit.fontawesome.com/51b562cd96.js', array(), null, false );
 	wp_script_add_data( 'font-awesome-kit', 'crossorigin', 'anonymous' );
 
-	wp_enqueue_script ( 'component-header-vendor', get_stylesheet_directory_uri() . '/src/uds-header/js/vendor.umd.js', array( 'wp-element', 'wp-components' ), null, false );
-	wp_enqueue_script ( 'component-header', get_stylesheet_directory_uri() . '/src/uds-header/js/asuHeader.umd.js', array( 'wp-element', 'wp-components' ), null, false );
-	wp_enqueue_script ( 'component-header-init', get_stylesheet_directory_uri() . '/dist/js/asu-header-init.js', array(), null, false );
+	// Component header and footer.
+	wp_enqueue_script ( 'component-header-footer', get_stylesheet_directory_uri()  . '/src/component-header-footer/asuHeaderFooter.umd.js', array( 'wp-element', 'wp-components' ), null, true );
 
-	wp_enqueue_script ( 'component-footer-vendor', get_stylesheet_directory_uri() . '/src/uds-footer/js/vendor.umd.js', array( 'wp-element', 'wp-components' ), null, false );
-	wp_enqueue_script ( 'component-footer', get_stylesheet_directory_uri() . '/src/uds-footer/js/asuFooter.umd.js', array( 'wp-element', 'wp-components' ), null, false );
+	// Init files for header/footer
+	wp_enqueue_script ( 'component-header-init', get_stylesheet_directory_uri() . '/dist/js/asu-header-init.js', array(), null, false );
 	wp_enqueue_script ( 'component-footer-init', get_stylesheet_directory_uri() . '/dist/js/asu-footer-init.js', array(), null, false );
+
+	// wp_enqueue_script ( 'component-header-vendor', get_stylesheet_directory_uri() . '/src/uds-header/js/vendor.umd.js', array( 'wp-element', 'wp-components' ), null, false );
+	// wp_enqueue_script ( 'component-header', get_stylesheet_directory_uri() . '/src/uds-header/js/asuHeader.umd.js', array( 'wp-element', 'wp-components' ), null, false );
+	// wp_enqueue_script ( 'component-header-init', get_stylesheet_directory_uri() . '/dist/js/asu-header-init.js', array(), null, false );
+
+	// wp_enqueue_script ( 'component-footer-vendor', get_stylesheet_directory_uri() . '/src/uds-footer/js/vendor.umd.js', array( 'wp-element', 'wp-components' ), null, false );
+	// wp_enqueue_script ( 'component-footer', get_stylesheet_directory_uri() . '/src/uds-footer/js/asuFooter.umd.js', array( 'wp-element', 'wp-components' ), null, false );
+	// wp_enqueue_script ( 'component-footer-init', get_stylesheet_directory_uri() . '/dist/js/asu-footer-init.js', array(), null, false );
 
 	wp_enqueue_script ( 'asu-divi', get_stylesheet_directory_uri() . '/dist/js/theme.js', array(), null, false );
 
